@@ -1,0 +1,1782 @@
+{
+  "version": 1,
+  "kind": "native-presentation",
+  "status": "ready",
+  "id": "emdash-rhpl-homd-homology-2026-11-07",
+  "title": "Functorial Type Theory: Dependent Homs, Homology and Exact Sequences",
+  "audience": "Researchers and graduate students familiar with categories, functors and chain complexes.",
+  "message": "Follow coherent dependent-Hom action through whole universal operations to a nonsplit homology and long-exact-sequence calculation.",
+  "courseSha256": "b89ff3e28d561dc92be9c35d7290a648cb9fa1783852872016a712b443a6d948",
+  "fps": 30,
+  "frames": 34602,
+  "entry": "presentation/index.html",
+  "audio": "presentation/assets/voice.m4a",
+  "captions": "captions.vtt",
+  "width": 1920,
+  "height": 1080,
+  "narrationDisclosure": "ai-generated",
+  "renderer": {
+    "name": "hyperframes",
+    "version": "0.8.110",
+    "playerSha256": "7e1fe1f0f67336d412c6e4059d70403388d17724f07bf343d0f7e706d6b11d21",
+    "runtimeSha256": "a8f1a11058cae448e7603169189feeb4c452c834fbff9e1383429e52d49114ef"
+  },
+  "sources": [
+    {
+      "url": "https://github.com/hotdocx/emdash",
+      "note": "Current main book 0.10.2-dev and November6 communication at main baseline1c54971f; RHPL papers supply historical perspective only."
+    },
+    {
+      "url": "https://doi.org/10.5281/zenodo.21544186",
+      "note": "Book publication record; the current retained development edition is identified separately."
+    }
+  ],
+  "evidence": {
+    "seminarManifestSha256": "40530b39a5adc98ef82dd7662892c2d72e70bd2cf7db53c9f56593e4b532cda7",
+    "scopeNote": "Standalone RHPL-perspective talk grounded in the current main book and consolidated Homd communication. Current profiles replace historical paper status; compact communication notation is explanatory. Ordinary/additive and model contracts remain explicit. WalkingEnd/Circle is omitted from the core. No new formal replay. This recovery reuses the retained narration and exact measured teaching frames.",
+    "excerptsIncluded": false,
+    "claims": [
+      {
+        "id": "perspective",
+        "statement": "Reusable mathematical computation retains actual objects, induced maps and selected data for further constructions.",
+        "qualification": "Current main-book exposition and source-reported conditional interfaces; no new whole-library formal verification by this adaptation.",
+        "citations": [
+          {
+            "publicationId": "emdash-rhpl-perspective-20261107",
+            "title": "RHPL computational-mathematics perspective",
+            "edition": "Historical September/October 2026 overview; adjusted against current main in this adaptation",
+            "sectionId": "overview#1-mathematical-structure-as-a-computational-interface",
+            "sectionSha256": "5a792f683afc99bb09c75ca3f0362b1b19541b1c9e260a45fab7d82b6bcbc2c2",
+            "quoteSha256": "5a792f683afc99bb09c75ca3f0362b1b19541b1c9e260a45fab7d82b6bcbc2c2",
+            "startOffset": 0,
+            "endOffset": 2267
+          },
+          {
+            "publicationId": "emdash-main-book-20261107",
+            "title": "Functorial Type Theory: Univalent Foundations for Mathematics",
+            "edition": "0.10.2-dev",
+            "sectionId": "chapter-31#what-is-computed-supplied-and-proved",
+            "sectionSha256": "e1369ac41b525cb309e47d61ec3d313a25e25fd26ae95d085f09347ace8b1a69",
+            "quoteSha256": "e1369ac41b525cb309e47d61ec3d313a25e25fd26ae95d085f09347ace8b1a69",
+            "startOffset": 0,
+            "endOffset": 2942
+          }
+        ]
+      },
+      {
+        "id": "homd-leaf",
+        "statement": "For an admitted family, the fixed dependent-Hom value is Hom in the target fibre from the transported source object to the target object.",
+        "qualification": "Current main-book exposition and source-reported conditional interfaces; no new whole-library formal verification by this adaptation.",
+        "citations": [
+          {
+            "publicationId": "emdash-main-book-20261107",
+            "title": "Functorial Type Theory: Univalent Foundations for Mathematics",
+            "edition": "0.10.2-dev",
+            "sectionId": "chapter-2#chapter-2-7-1",
+            "sectionSha256": "b2f862de3b00084ee2bd18c43fa032e9df456f7a629b6345b7778d6a88279d24",
+            "quoteSha256": "b2f862de3b00084ee2bd18c43fa032e9df456f7a629b6345b7778d6a88279d24",
+            "startOffset": 0,
+            "endOffset": 4299
+          },
+          {
+            "publicationId": "emdash-homd-communication-20261107",
+            "title": "Dependent Hom, duality and the ordinary-category repair",
+            "edition": "2026-11-06 consolidated communication; e1bbf5de",
+            "sectionId": "communication#communication-draft",
+            "sectionSha256": "a02597b2c5d40f8955889c963f98d083227a5ffdedadbde186d9eb4702ba499e",
+            "quoteSha256": "a02597b2c5d40f8955889c963f98d083227a5ffdedadbde186d9eb4702ba499e",
+            "startOffset": 0,
+            "endOffset": 3976
+          }
+        ]
+      },
+      {
+        "id": "profiles",
+        "statement": "Public functors are strict, family coefficients are Cartesian, the Homd root is strict across x, and its Q-valued y-transformation retains lax comparison.",
+        "qualification": "Current main-book exposition and source-reported conditional interfaces; no new whole-library formal verification by this adaptation.",
+        "citations": [
+          {
+            "publicationId": "emdash-homd-communication-20261107",
+            "title": "Dependent Hom, duality and the ordinary-category repair",
+            "edition": "2026-11-06 consolidated communication; e1bbf5de",
+            "sectionId": "communication#conventions-and-scope-of-the-short-presentation",
+            "sectionSha256": "f6df96635be928ee4e4084e76ba0898d306730850e31c7c304d77e38eccb8130",
+            "quoteSha256": "f6df96635be928ee4e4084e76ba0898d306730850e31c7c304d77e38eccb8130",
+            "startOffset": 0,
+            "endOffset": 3143
+          },
+          {
+            "publicationId": "emdash-homd-communication-20261107",
+            "title": "Dependent Hom, duality and the ordinary-category repair",
+            "edition": "2026-11-06 consolidated communication; e1bbf5de",
+            "sectionId": "communication#current-whole-construction-and-direct-ladder",
+            "sectionSha256": "839cfd09e792af52494fb4197df987c220d20efb9b48940c76cf786906a7689e",
+            "quoteSha256": "839cfd09e792af52494fb4197df987c220d20efb9b48940c76cf786906a7689e",
+            "startOffset": 0,
+            "endOffset": 3333
+          },
+          {
+            "publicationId": "emdash-main-book-20261107",
+            "title": "Functorial Type Theory: Univalent Foundations for Mathematics",
+            "edition": "0.10.2-dev",
+            "sectionId": "chapter-2#chapter-2-7-1",
+            "sectionSha256": "b2f862de3b00084ee2bd18c43fa032e9df456f7a629b6345b7778d6a88279d24",
+            "quoteSha256": "b2f862de3b00084ee2bd18c43fa032e9df456f7a629b6345b7778d6a88279d24",
+            "startOffset": 0,
+            "endOffset": 4299
+          }
+        ]
+      },
+      {
+        "id": "target-action",
+        "statement": "The represented mixed comparison recovers a map a to E[q](a) in the stated direction; ordinary factorization examples can make that comparison noninvertible.",
+        "qualification": "Ordinary-model illustration explains the comparison; it does not construct an unrestricted higher coend model.",
+        "citations": [
+          {
+            "publicationId": "emdash-homd-communication-20261107",
+            "title": "Dependent Hom, duality and the ordinary-category repair",
+            "edition": "2026-11-06 consolidated communication; e1bbf5de",
+            "sectionId": "communication#the-mixed-comparison-and-its-concrete-meaning",
+            "sectionSha256": "715b6a5a6e69886904c25c1caa3d826a73a938e607f1ffabff6a9d62fb92fc6e",
+            "quoteSha256": "715b6a5a6e69886904c25c1caa3d826a73a938e607f1ffabff6a9d62fb92fc6e",
+            "startOffset": 0,
+            "endOffset": 3102
+          }
+        ]
+      },
+      {
+        "id": "coefficient",
+        "statement": "P, the profunctor coefficient Q and the Q-valued transformation category retain different levels of the whole construction.",
+        "qualification": "Current main-book exposition and source-reported conditional interfaces; no new whole-library formal verification by this adaptation.",
+        "citations": [
+          {
+            "publicationId": "emdash-homd-communication-20261107",
+            "title": "Dependent Hom, duality and the ordinary-category repair",
+            "edition": "2026-11-06 consolidated communication; e1bbf5de",
+            "sectionId": "communication#current-whole-construction-and-direct-ladder",
+            "sectionSha256": "839cfd09e792af52494fb4197df987c220d20efb9b48940c76cf786906a7689e",
+            "quoteSha256": "839cfd09e792af52494fb4197df987c220d20efb9b48940c76cf786906a7689e",
+            "startOffset": 0,
+            "endOffset": 3333
+          },
+          {
+            "publicationId": "emdash-homd-communication-20261107",
+            "title": "Dependent Hom, duality and the ordinary-category repair",
+            "edition": "2026-11-06 consolidated communication; e1bbf5de",
+            "sectionId": "communication#why-unfolding-q-does-not-recreate-the-old-variance-defect",
+            "sectionSha256": "2bfec2773f3d67d40577e89a8ae088023a924ad6d2f3530a46c8c19bcd3b2d65",
+            "quoteSha256": "2bfec2773f3d67d40577e89a8ae088023a924ad6d2f3530a46c8c19bcd3b2d65",
+            "startOffset": 0,
+            "endOffset": 1561
+          },
+          {
+            "publicationId": "emdash-main-book-20261107",
+            "title": "Functorial Type Theory: Univalent Foundations for Mathematics",
+            "edition": "0.10.2-dev",
+            "sectionId": "chapter-2#chapter-2-7-1",
+            "sectionSha256": "b2f862de3b00084ee2bd18c43fa032e9df456f7a629b6345b7778d6a88279d24",
+            "quoteSha256": "b2f862de3b00084ee2bd18c43fa032e9df456f7a629b6345b7778d6a88279d24",
+            "startOffset": 0,
+            "endOffset": 4299
+          }
+        ]
+      },
+      {
+        "id": "ladder",
+        "statement": "The x/u/y/v/f rungs directly observe the identity Homd core; the general displayed-map extension is a defined composite.",
+        "qualification": "Current main-book exposition and source-reported conditional interfaces; no new whole-library formal verification by this adaptation.",
+        "citations": [
+          {
+            "publicationId": "emdash-main-book-20261107",
+            "title": "Functorial Type Theory: Univalent Foundations for Mathematics",
+            "edition": "0.10.2-dev",
+            "sectionId": "appendix-formal-presentation#the-whole-dependent-hom-ladder",
+            "sectionSha256": "87720f87b0b67aa6c09974f264d497a522e185ef84565c19caeced240433eeb7",
+            "quoteSha256": "87720f87b0b67aa6c09974f264d497a522e185ef84565c19caeced240433eeb7",
+            "startOffset": 0,
+            "endOffset": 1470
+          },
+          {
+            "publicationId": "emdash-homd-communication-20261107",
+            "title": "Dependent Hom, duality and the ordinary-category repair",
+            "edition": "2026-11-06 consolidated communication; e1bbf5de",
+            "sectionId": "communication#current-whole-construction-and-direct-ladder",
+            "sectionSha256": "839cfd09e792af52494fb4197df987c220d20efb9b48940c76cf786906a7689e",
+            "quoteSha256": "839cfd09e792af52494fb4197df987c220d20efb9b48940c76cf786906a7689e",
+            "startOffset": 0,
+            "endOffset": 3333
+          }
+        ]
+      },
+      {
+        "id": "variance",
+        "statement": "The source index uses represented mates with a dimension-two reversal, compensated by the outer fibrewise opposite; the whole y action is not an ordinary diagonal family.",
+        "qualification": "The communication shorthand explains the selected current owners; future whole represented/mate packages and arbitrary Q coherence are not inferred.",
+        "citations": [
+          {
+            "publicationId": "emdash-homd-communication-20261107",
+            "title": "Dependent Hom, duality and the ordinary-category repair",
+            "edition": "2026-11-06 consolidated communication; e1bbf5de",
+            "sectionId": "communication#communication-draft",
+            "sectionSha256": "a02597b2c5d40f8955889c963f98d083227a5ffdedadbde186d9eb4702ba499e",
+            "quoteSha256": "a02597b2c5d40f8955889c963f98d083227a5ffdedadbde186d9eb4702ba499e",
+            "startOffset": 0,
+            "endOffset": 3976
+          },
+          {
+            "publicationId": "emdash-homd-communication-20261107",
+            "title": "Dependent Hom, duality and the ordinary-category repair",
+            "edition": "2026-11-06 consolidated communication; e1bbf5de",
+            "sectionId": "communication#current-whole-construction-and-direct-ladder",
+            "sectionSha256": "839cfd09e792af52494fb4197df987c220d20efb9b48940c76cf786906a7689e",
+            "quoteSha256": "839cfd09e792af52494fb4197df987c220d20efb9b48940c76cf786906a7689e",
+            "startOffset": 0,
+            "endOffset": 3333
+          },
+          {
+            "publicationId": "emdash-homd-communication-20261107",
+            "title": "Dependent Hom, duality and the ordinary-category repair",
+            "edition": "2026-11-06 consolidated communication; e1bbf5de",
+            "sectionId": "communication#why-unfolding-q-does-not-recreate-the-old-variance-defect",
+            "sectionSha256": "2bfec2773f3d67d40577e89a8ae088023a924ad6d2f3530a46c8c19bcd3b2d65",
+            "quoteSha256": "2bfec2773f3d67d40577e89a8ae088023a924ad6d2f3530a46c8c19bcd3b2d65",
+            "startOffset": 0,
+            "endOffset": 1561
+          }
+        ]
+      },
+      {
+        "id": "adjunctions",
+        "statement": "Whole kernel and cokernel adjunction structures provide inclusions, quotients and universal factors, with an oplax native walking-arrow diagram profile.",
+        "qualification": "Current main-book exposition and source-reported conditional interfaces; no new whole-library formal verification by this adaptation.",
+        "citations": [
+          {
+            "publicationId": "emdash-main-book-20261107",
+            "title": "Functorial Type Theory: Univalent Foundations for Mathematics",
+            "edition": "0.10.2-dev",
+            "sectionId": "chapter-31#31-2-universality-as-a-whole-adjunction",
+            "sectionSha256": "fb01d7eb9b2c6edb33455e0dbc663eeff91157e31eff88199c2331e44dceb6de",
+            "quoteSha256": "fb01d7eb9b2c6edb33455e0dbc663eeff91157e31eff88199c2331e44dceb6de",
+            "startOffset": 0,
+            "endOffset": 2435
+          }
+        ]
+      },
+      {
+        "id": "homology",
+        "statement": "A native zero input produces a whole boundary into cycles by the kernel mate, and H is the original cokernel functor applied to the boundary arrow family.",
+        "qualification": "Current main-book exposition and source-reported conditional interfaces; no new whole-library formal verification by this adaptation.",
+        "citations": [
+          {
+            "publicationId": "emdash-main-book-20261107",
+            "title": "Functorial Type Theory: Univalent Foundations for Mathematics",
+            "edition": "0.10.2-dev",
+            "sectionId": "chapter-31#31-4-whole-homology-from-a-native-zero-diagram",
+            "sectionSha256": "8c493cd56af69092ad4b5cdaff79b62d49599f3860b43aaabdd2a0e6bc3e4f65",
+            "quoteSha256": "8c493cd56af69092ad4b5cdaff79b62d49599f3860b43aaabdd2a0e6bc3e4f65",
+            "startOffset": 0,
+            "endOffset": 1357
+          },
+          {
+            "publicationId": "emdash-main-book-20261107",
+            "title": "Functorial Type Theory: Univalent Foundations for Mathematics",
+            "edition": "0.10.2-dev",
+            "sectionId": "appendix-formal-presentation#whole-homological-operations-and-their-record-views",
+            "sectionSha256": "feb5c9af7a0e6fc3ace75223b7eac61b4b8abe51bab4c1e15f5970f257cb9674",
+            "quoteSha256": "feb5c9af7a0e6fc3ace75223b7eac61b4b8abe51bab4c1e15f5970f257cb9674",
+            "startOffset": 0,
+            "endOffset": 2488
+          }
+        ]
+      },
+      {
+        "id": "families",
+        "statement": "A coherent family of native inputs is classified by Gamma; the comparison H_family to H_native after Gamma retains actual maps and inverse data.",
+        "qualification": "Current main-book exposition and source-reported conditional interfaces; no new whole-library formal verification by this adaptation.",
+        "citations": [
+          {
+            "publicationId": "emdash-main-book-20261107",
+            "title": "Functorial Type Theory: Univalent Foundations for Mathematics",
+            "edition": "0.10.2-dev",
+            "sectionId": "chapter-31#classifying-a-whole-family-of-native-inputs",
+            "sectionSha256": "fac436dfe8327ec536dcb6d470ef22423b8c9e4d772e852aa19dc6fbd45c9f2a",
+            "quoteSha256": "fac436dfe8327ec536dcb6d470ef22423b8c9e4d772e852aa19dc6fbd45c9f2a",
+            "startOffset": 0,
+            "endOffset": 2367
+          }
+        ]
+      },
+      {
+        "id": "connecting",
+        "statement": "Under whole adjunction, row exactness and normality hypotheses, the connecting transformation is built by a cycle cover and two universal descents, without a chosen linear section.",
+        "qualification": "Current main-book exposition and source-reported conditional interfaces; no new whole-library formal verification by this adaptation.",
+        "citations": [
+          {
+            "publicationId": "emdash-main-book-20261107",
+            "title": "Functorial Type Theory: Univalent Foundations for Mathematics",
+            "edition": "0.10.2-dev",
+            "sectionId": "chapter-31#31-6-constructing-the-whole-connecting-transformation",
+            "sectionSha256": "de62b3266ffefeff6575449f8b9896f26ecd024311e4a82d3a6051202e808409",
+            "quoteSha256": "de62b3266ffefeff6575449f8b9896f26ecd024311e4a82d3a6051202e808409",
+            "startOffset": 0,
+            "endOffset": 2665
+          }
+        ]
+      },
+      {
+        "id": "exactness",
+        "statement": "The three interior positions of a homology window have derived equivalences at their actual canonical image-to-kernel comparisons.",
+        "qualification": "Current main-book exposition and source-reported conditional interfaces; no new whole-library formal verification by this adaptation.",
+        "citations": [
+          {
+            "publicationId": "emdash-main-book-20261107",
+            "title": "Functorial Type Theory: Univalent Foundations for Mathematics",
+            "edition": "0.10.2-dev",
+            "sectionId": "chapter-31#31-5-exactness-at-the-canonical-comparison",
+            "sectionSha256": "ab72d498ce17eb1adc7b8600ff385b03985b54dcfbb17d1cf123c2cd697bdec4",
+            "quoteSha256": "ab72d498ce17eb1adc7b8600ff385b03985b54dcfbb17d1cf123c2cd697bdec4",
+            "startOffset": 0,
+            "endOffset": 2065
+          },
+          {
+            "publicationId": "emdash-main-book-20261107",
+            "title": "Functorial Type Theory: Univalent Foundations for Mathematics",
+            "edition": "0.10.2-dev",
+            "sectionId": "chapter-31#31-7-exact-homology-windows-and-finite-assembly",
+            "sectionSha256": "bb19a1f1353407e36b62d501103375c0e33ea4904f03e6eb411ebc0230e614b8",
+            "quoteSha256": "bb19a1f1353407e36b62d501103375c0e33ea4904f03e6eb411ebc0230e614b8",
+            "startOffset": 0,
+            "endOffset": 1344
+          }
+        ]
+      },
+      {
+        "id": "nonsplit",
+        "statement": "For R=Q[x] and S=R/(x), the stated degree-one/zero complexes form nonsplit short-exact rows and have the stated homologies.",
+        "qualification": "Current main-book exposition and source-reported conditional interfaces; no new whole-library formal verification by this adaptation.",
+        "citations": [
+          {
+            "publicationId": "emdash-main-book-20261107",
+            "title": "Functorial Type Theory: Univalent Foundations for Mathematics",
+            "edition": "0.10.2-dev",
+            "sectionId": "chapter-31#homology-nonsplit-worked-example",
+            "sectionSha256": "646ee4f0015c1e44e40d6a2484fcbecbafb55be1d5632c8ade4fafa5bfe4faf6",
+            "quoteSha256": "646ee4f0015c1e44e40d6a2484fcbecbafb55be1d5632c8ade4fafa5bfe4faf6",
+            "startOffset": 0,
+            "endOffset": 1099
+          },
+          {
+            "publicationId": "emdash-rhpl-perspective-20261107",
+            "title": "RHPL computational-mathematics perspective",
+            "edition": "Historical September/October 2026 overview; adjusted against current main in this adaptation",
+            "sectionId": "rhpl#3-from-universal-constructions-to-algebra",
+            "sectionSha256": "36950b31e0e87062880892efe02c773e036ffd0e116fea7fac6a5fae4cc2de4a",
+            "quoteSha256": "36950b31e0e87062880892efe02c773e036ffd0e116fea7fac6a5fae4cc2de4a",
+            "startOffset": 0,
+            "endOffset": 3552
+          }
+        ]
+      },
+      {
+        "id": "delta-example",
+        "statement": "In the nonsplit polynomial example, lifting a representative, applying the differential and quotient descent gives the positive identity connecting map.",
+        "qualification": "Current main-book exposition and source-reported conditional interfaces; no new whole-library formal verification by this adaptation.",
+        "citations": [
+          {
+            "publicationId": "emdash-main-book-20261107",
+            "title": "Functorial Type Theory: Univalent Foundations for Mathematics",
+            "edition": "0.10.2-dev",
+            "sectionId": "chapter-31#homology-nonsplit-worked-example",
+            "sectionSha256": "646ee4f0015c1e44e40d6a2484fcbecbafb55be1d5632c8ade4fafa5bfe4faf6",
+            "quoteSha256": "646ee4f0015c1e44e40d6a2484fcbecbafb55be1d5632c8ade4fafa5bfe4faf6",
+            "startOffset": 0,
+            "endOffset": 1099
+          },
+          {
+            "publicationId": "emdash-rhpl-perspective-20261107",
+            "title": "RHPL computational-mathematics perspective",
+            "edition": "Historical September/October 2026 overview; adjusted against current main in this adaptation",
+            "sectionId": "overview#8-4-a-nonsplit-polynomial-example",
+            "sectionSha256": "1ab60f1f3ff56d418e455a98be7ddfbd1ef28fa9f2779371b44f4177a0c43578",
+            "quoteSha256": "1ab60f1f3ff56d418e455a98be7ddfbd1ef28fa9f2779371b44f4177a0c43578",
+            "startOffset": 0,
+            "endOffset": 2162
+          }
+        ]
+      },
+      {
+        "id": "presentations",
+        "statement": "The selected raw matrices and relation witnesses must be interpreted as quotient maps on their actual presentations; [x] induces zero on S and H0(D) retains [x x].",
+        "qualification": "Current main-book exposition and source-reported conditional interfaces; no new whole-library formal verification by this adaptation.",
+        "citations": [
+          {
+            "publicationId": "emdash-main-book-20261107",
+            "title": "Functorial Type Theory: Univalent Foundations for Mathematics",
+            "edition": "0.10.2-dev",
+            "sectionId": "chapter-31#retaining-the-actual-presentations",
+            "sectionSha256": "5be4710c0704a7fdab4119a5583203ced386809bb84e34461a3553634569191c",
+            "quoteSha256": "5be4710c0704a7fdab4119a5583203ced386809bb84e34461a3553634569191c",
+            "startOffset": 0,
+            "endOffset": 1015
+          },
+          {
+            "publicationId": "emdash-main-book-20261107",
+            "title": "Functorial Type Theory: Univalent Foundations for Mathematics",
+            "edition": "0.10.2-dev",
+            "sectionId": "chapter-31#the-complete-native-les-certificate",
+            "sectionSha256": "66b3c4e95d76c5bc31882671bbc7aabf376a2f3f3e40c352ae6cb515a28a38c3",
+            "quoteSha256": "66b3c4e95d76c5bc31882671bbc7aabf376a2f3f3e40c352ae6cb515a28a38c3",
+            "startOffset": 0,
+            "endOffset": 3144
+          }
+        ]
+      },
+      {
+        "id": "contracts",
+        "statement": "Computed equations, supplied model/normality/interpretation contracts and derived exactness have distinct roles; the displayed finite certificate adds no output-exactness premise.",
+        "qualification": "Current main-book exposition and source-reported conditional interfaces; no new whole-library formal verification by this adaptation.",
+        "citations": [
+          {
+            "publicationId": "emdash-main-book-20261107",
+            "title": "Functorial Type Theory: Univalent Foundations for Mathematics",
+            "edition": "0.10.2-dev",
+            "sectionId": "chapter-31#31-10-native-models-and-complete-cas-observations",
+            "sectionSha256": "7de11f6dfb74a0084fa448397cbe42c6a41eeb7f12673cf2564e4f59e093e7f1",
+            "quoteSha256": "7de11f6dfb74a0084fa448397cbe42c6a41eeb7f12673cf2564e4f59e093e7f1",
+            "startOffset": 0,
+            "endOffset": 1821
+          },
+          {
+            "publicationId": "emdash-main-book-20261107",
+            "title": "Functorial Type Theory: Univalent Foundations for Mathematics",
+            "edition": "0.10.2-dev",
+            "sectionId": "chapter-31#what-is-computed-supplied-and-proved",
+            "sectionSha256": "e1369ac41b525cb309e47d61ec3d313a25e25fd26ae95d085f09347ace8b1a69",
+            "quoteSha256": "e1369ac41b525cb309e47d61ec3d313a25e25fd26ae95d085f09347ace8b1a69",
+            "startOffset": 0,
+            "endOffset": 2942
+          },
+          {
+            "publicationId": "emdash-main-book-20261107",
+            "title": "Functorial Type Theory: Univalent Foundations for Mathematics",
+            "edition": "0.10.2-dev",
+            "sectionId": "chapter-31#the-complete-native-les-certificate",
+            "sectionSha256": "66b3c4e95d76c5bc31882671bbc7aabf376a2f3f3e40c352ae6cb515a28a38c3",
+            "quoteSha256": "66b3c4e95d76c5bc31882671bbc7aabf376a2f3f3e40c352ae6cb515a28a38c3",
+            "startOffset": 0,
+            "endOffset": 3144
+          }
+        ]
+      },
+      {
+        "id": "scope",
+        "statement": "Current homological results retain ordinary structural and model hypotheses; general higher, unbounded and global metatheoretic claims remain outside the stated boundary.",
+        "qualification": "Current main-book exposition and source-reported conditional interfaces; no new whole-library formal verification by this adaptation.",
+        "citations": [
+          {
+            "publicationId": "emdash-main-book-20261107",
+            "title": "Functorial Type Theory: Univalent Foundations for Mathematics",
+            "edition": "0.10.2-dev",
+            "sectionId": "chapter-31#31-12-computation-qualifications-and-further-work",
+            "sectionSha256": "a5ff8fa25413274c058987375af7f96ddde5ff8c38193d087c5c889a6c40bbfa",
+            "quoteSha256": "a5ff8fa25413274c058987375af7f96ddde5ff8c38193d087c5c889a6c40bbfa",
+            "startOffset": 0,
+            "endOffset": 3560
+          },
+          {
+            "publicationId": "emdash-homd-communication-20261107",
+            "title": "Dependent Hom, duality and the ordinary-category repair",
+            "edition": "2026-11-06 consolidated communication; e1bbf5de",
+            "sectionId": "communication#conventions-and-scope-of-the-short-presentation",
+            "sectionSha256": "f6df96635be928ee4e4084e76ba0898d306730850e31c7c304d77e38eccb8130",
+            "quoteSha256": "f6df96635be928ee4e4084e76ba0898d306730850e31c7c304d77e38eccb8130",
+            "startOffset": 0,
+            "endOffset": 3143
+          }
+        ]
+      }
+    ],
+    "bindings": [
+      {
+        "stepId": "r01-01",
+        "claimIds": [
+          "perspective",
+          "homology",
+          "delta-example"
+        ]
+      },
+      {
+        "stepId": "r01-02",
+        "claimIds": [
+          "perspective",
+          "homology",
+          "delta-example"
+        ]
+      },
+      {
+        "stepId": "r02-01",
+        "claimIds": [
+          "homd-leaf",
+          "profiles"
+        ]
+      },
+      {
+        "stepId": "r02-02",
+        "claimIds": [
+          "homd-leaf",
+          "profiles"
+        ]
+      },
+      {
+        "stepId": "r02-03",
+        "claimIds": [
+          "homd-leaf",
+          "profiles"
+        ]
+      },
+      {
+        "stepId": "r03-01",
+        "claimIds": [
+          "homd-leaf",
+          "ladder"
+        ]
+      },
+      {
+        "stepId": "r03-02",
+        "claimIds": [
+          "homd-leaf",
+          "ladder"
+        ]
+      },
+      {
+        "stepId": "r03-03",
+        "claimIds": [
+          "homd-leaf",
+          "ladder"
+        ]
+      },
+      {
+        "stepId": "r04-01",
+        "claimIds": [
+          "target-action",
+          "coefficient"
+        ]
+      },
+      {
+        "stepId": "r04-02",
+        "claimIds": [
+          "target-action",
+          "coefficient"
+        ]
+      },
+      {
+        "stepId": "r04-03",
+        "claimIds": [
+          "target-action",
+          "coefficient"
+        ]
+      },
+      {
+        "stepId": "r05-01",
+        "claimIds": [
+          "coefficient",
+          "profiles"
+        ]
+      },
+      {
+        "stepId": "r05-02",
+        "claimIds": [
+          "coefficient",
+          "profiles"
+        ]
+      },
+      {
+        "stepId": "r05-03",
+        "claimIds": [
+          "coefficient",
+          "profiles"
+        ]
+      },
+      {
+        "stepId": "r06-01",
+        "claimIds": [
+          "ladder",
+          "profiles"
+        ]
+      },
+      {
+        "stepId": "r06-02",
+        "claimIds": [
+          "ladder",
+          "profiles"
+        ]
+      },
+      {
+        "stepId": "r06-03",
+        "claimIds": [
+          "ladder",
+          "profiles"
+        ]
+      },
+      {
+        "stepId": "r06-04",
+        "claimIds": [
+          "ladder",
+          "profiles"
+        ]
+      },
+      {
+        "stepId": "r07-01",
+        "claimIds": [
+          "variance",
+          "target-action"
+        ]
+      },
+      {
+        "stepId": "r07-02",
+        "claimIds": [
+          "variance",
+          "target-action"
+        ]
+      },
+      {
+        "stepId": "r07-03",
+        "claimIds": [
+          "variance",
+          "target-action"
+        ]
+      },
+      {
+        "stepId": "r08-01",
+        "claimIds": [
+          "homology",
+          "adjunctions",
+          "scope"
+        ]
+      },
+      {
+        "stepId": "r08-02",
+        "claimIds": [
+          "homology",
+          "adjunctions",
+          "scope"
+        ]
+      },
+      {
+        "stepId": "r08-03",
+        "claimIds": [
+          "homology",
+          "adjunctions",
+          "scope"
+        ]
+      },
+      {
+        "stepId": "r09-01",
+        "claimIds": [
+          "adjunctions"
+        ]
+      },
+      {
+        "stepId": "r09-02",
+        "claimIds": [
+          "adjunctions"
+        ]
+      },
+      {
+        "stepId": "r09-03",
+        "claimIds": [
+          "adjunctions"
+        ]
+      },
+      {
+        "stepId": "r10-01",
+        "claimIds": [
+          "homology",
+          "contracts"
+        ]
+      },
+      {
+        "stepId": "r10-02",
+        "claimIds": [
+          "homology",
+          "contracts"
+        ]
+      },
+      {
+        "stepId": "r10-03",
+        "claimIds": [
+          "homology",
+          "contracts"
+        ]
+      },
+      {
+        "stepId": "r11-01",
+        "claimIds": [
+          "families",
+          "homology"
+        ]
+      },
+      {
+        "stepId": "r11-02",
+        "claimIds": [
+          "families",
+          "homology"
+        ]
+      },
+      {
+        "stepId": "r11-03",
+        "claimIds": [
+          "families",
+          "homology"
+        ]
+      },
+      {
+        "stepId": "r12-01",
+        "claimIds": [
+          "connecting",
+          "adjunctions"
+        ]
+      },
+      {
+        "stepId": "r12-02",
+        "claimIds": [
+          "connecting",
+          "adjunctions"
+        ]
+      },
+      {
+        "stepId": "r12-03",
+        "claimIds": [
+          "connecting",
+          "adjunctions"
+        ]
+      },
+      {
+        "stepId": "r12-04",
+        "claimIds": [
+          "connecting",
+          "adjunctions"
+        ]
+      },
+      {
+        "stepId": "r13-01",
+        "claimIds": [
+          "exactness",
+          "contracts"
+        ]
+      },
+      {
+        "stepId": "r13-02",
+        "claimIds": [
+          "exactness",
+          "contracts"
+        ]
+      },
+      {
+        "stepId": "r13-03",
+        "claimIds": [
+          "exactness",
+          "contracts"
+        ]
+      },
+      {
+        "stepId": "r14-01",
+        "claimIds": [
+          "nonsplit"
+        ]
+      },
+      {
+        "stepId": "r14-02",
+        "claimIds": [
+          "nonsplit"
+        ]
+      },
+      {
+        "stepId": "r14-03",
+        "claimIds": [
+          "nonsplit"
+        ]
+      },
+      {
+        "stepId": "r15-01",
+        "claimIds": [
+          "nonsplit",
+          "delta-example",
+          "connecting"
+        ]
+      },
+      {
+        "stepId": "r15-02",
+        "claimIds": [
+          "nonsplit",
+          "delta-example",
+          "connecting"
+        ]
+      },
+      {
+        "stepId": "r15-03",
+        "claimIds": [
+          "nonsplit",
+          "delta-example",
+          "connecting"
+        ]
+      },
+      {
+        "stepId": "r15-04",
+        "claimIds": [
+          "nonsplit",
+          "delta-example",
+          "connecting"
+        ]
+      },
+      {
+        "stepId": "r16-01",
+        "claimIds": [
+          "presentations",
+          "contracts"
+        ]
+      },
+      {
+        "stepId": "r16-02",
+        "claimIds": [
+          "presentations",
+          "contracts"
+        ]
+      },
+      {
+        "stepId": "r16-03",
+        "claimIds": [
+          "presentations",
+          "contracts"
+        ]
+      },
+      {
+        "stepId": "r17-01",
+        "claimIds": [
+          "contracts",
+          "scope"
+        ]
+      },
+      {
+        "stepId": "r17-02",
+        "claimIds": [
+          "contracts",
+          "scope"
+        ]
+      },
+      {
+        "stepId": "r17-03",
+        "claimIds": [
+          "contracts",
+          "scope"
+        ]
+      },
+      {
+        "stepId": "r18-01",
+        "claimIds": [
+          "ladder",
+          "homology",
+          "connecting",
+          "contracts",
+          "scope"
+        ]
+      },
+      {
+        "stepId": "r18-02",
+        "claimIds": [
+          "ladder",
+          "homology",
+          "connecting",
+          "contracts",
+          "scope"
+        ]
+      }
+    ]
+  },
+  "chapters": [
+    {
+      "id": "question",
+      "title": "The computational question",
+      "startFrame": 0,
+      "durationFrames": 3265,
+      "steps": [
+        {
+          "id": "r01-01",
+          "sceneId": "purpose",
+          "title": "Constructions and their induced maps",
+          "startFrame": 0,
+          "durationFrames": 658,
+          "speechFrames": 634,
+          "text": "A calculation of homology is often only the beginning of a mathematical task. We may next need the map induced by a chain map, or a comparison as the complex varies. This presentation asks how those operations can remain part of the construction itself, rather than being reconstructed from isolated output objects.",
+          "silent": false,
+          "descriptions": []
+        },
+        {
+          "id": "r01-02",
+          "sceneId": "purpose",
+          "title": "Constructions and their induced maps",
+          "startFrame": 658,
+          "durationFrames": 740,
+          "speechFrames": 650,
+          "text": "We follow that question through the current Emdash book. The first part explains the dependent hom and its observation ladder. The second builds homology and a connecting transformation from whole universal operations. A nonsplit polynomial example will make the payoff concrete: the connecting map is an identity, even though no linear splitting is available.",
+          "silent": false,
+          "descriptions": []
+        },
+        {
+          "id": "r02-01",
+          "sceneId": "families",
+          "title": "Directed families and transport",
+          "startFrame": 1398,
+          "durationFrames": 598,
+          "speechFrames": 574,
+          "text": "Let K be a category of parameters and let E be a directed family. An object x determines a fibre category. A base arrow f supplies a functor between fibres, so an object u in the source fibre can be transported to E of f applied to u in the target fibre.",
+          "silent": false,
+          "descriptions": [
+            "An admitted directed family takes values in the Cartesian coefficient universe.",
+            "A total arrow retains both its base arrow and its fibre component above transport."
+          ]
+        },
+        {
+          "id": "r02-02",
+          "sceneId": "families",
+          "title": "Directed families and transport",
+          "startFrame": 1996,
+          "durationFrames": 568,
+          "speechFrames": 544,
+          "text": "An arrow in the total category must remember that transport. It consists of the base arrow f and a fibre arrow from the transported object to v. The two components are typed together. This is the ordinary picture that motivates the dependent hom formula we will use throughout the first part.",
+          "silent": false,
+          "descriptions": [
+            "An admitted directed family takes values in the Cartesian coefficient universe.",
+            "A total arrow retains both its base arrow and its fibre component above transport."
+          ]
+        },
+        {
+          "id": "r02-03",
+          "sceneId": "families",
+          "title": "Directed families and transport",
+          "startFrame": 2564,
+          "durationFrames": 701,
+          "speechFrames": 611,
+          "text": "The current foundations specify the profiles more carefully than that informal picture. Public functors are strict, while transformations retain their stated lax comparisons. Families take values in the Cartesian coefficient universe. These choices control which higher actions exist and in which direction their comparison cells go.",
+          "silent": false,
+          "descriptions": [
+            "An admitted directed family takes values in the Cartesian coefficient universe.",
+            "A total arrow retains both its base arrow and its fibre component above transport."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "homd",
+      "title": "The dependent-Hom ladder",
+      "startFrame": 3265,
+      "durationFrames": 9916,
+      "steps": [
+        {
+          "id": "r03-01",
+          "sceneId": "leaf",
+          "title": "The dependent Hom",
+          "startFrame": 3265,
+          "durationFrames": 598,
+          "speechFrames": 574,
+          "text": "The dependent hom has a familiar value once all of its parameters are fixed. Start with u in the fibre over x, transport it along f, and take the hom from that transported object to v in the fibre over y. An object of this hom is precisely a possible fibre component of a total arrow.",
+          "silent": false,
+          "descriptions": [
+            "The fixed dependent-Hom value is a hom category in the target fibre."
+          ]
+        },
+        {
+          "id": "r03-02",
+          "sceneId": "leaf",
+          "title": "The dependent Hom",
+          "startFrame": 3863,
+          "durationFrames": 599,
+          "speechFrames": 575,
+          "text": "There are five parameters in this expression: the two base objects, the two fibre objects, and the arrow between the base objects. The displayed value explains one observation. A useful internal construction must also say how the result varies when any of these parameters varies, including the appropriate higher action.",
+          "silent": false,
+          "descriptions": [
+            "The fixed dependent-Hom value is a hom category in the target fibre."
+          ]
+        },
+        {
+          "id": "r03-03",
+          "sceneId": "leaf",
+          "title": "The dependent Hom",
+          "startFrame": 4462,
+          "durationFrames": 607,
+          "speechFrames": 517,
+          "text": "The distinction is consequential. Two proposals could agree on this final formula while assigning different directions to a higher comparison. We therefore want a whole construction whose successive observations recover the formula, while retaining the variation that later categorical constructions will consume.",
+          "silent": false,
+          "descriptions": [
+            "The fixed dependent-Hom value is a hom category in the target fibre."
+          ]
+        },
+        {
+          "id": "r04-01",
+          "sceneId": "target",
+          "title": "Variation in the target",
+          "startFrame": 5069,
+          "durationFrames": 552,
+          "speechFrames": 528,
+          "text": "Consider a second base arrow q, from y to z. It changes both the target object and the outgoing base arrow: v becomes its transport along q, and f becomes q after f. Applying the transport functor to a gives the forward comparison displayed on the slide.",
+          "silent": false,
+          "descriptions": [
+            "A base arrow q changes the target fibre and the endpoint of f.",
+            "Represented restriction recovers the transport comparison in the stated direction."
+          ]
+        },
+        {
+          "id": "r04-02",
+          "sceneId": "target",
+          "title": "Variation in the target",
+          "startFrame": 5621,
+          "durationFrames": 550,
+          "speechFrames": 526,
+          "text": "This direction is the one supplied by transport. Requesting a comparison in the reverse direction would demand extra structure, and may fail even in an ordinary example. A point formula that suppresses all action can hide this issue, which is why variance belongs in the mathematical interface.",
+          "silent": false,
+          "descriptions": [
+            "A base arrow q changes the target fibre and the endpoint of f.",
+            "Represented restriction recovers the transport comparison in the stated direction."
+          ]
+        },
+        {
+          "id": "r04-03",
+          "sceneId": "target",
+          "title": "Variation in the target",
+          "startFrame": 6171,
+          "durationFrames": 662,
+          "speechFrames": 572,
+          "text": "In the whole construction, the comparison lives in the profunctor coefficient category. The simple operation sending a to its transport is recovered on represented inputs. It explains the comparison without identifying every element of the larger composite with such a simple input, or asserting a complete higher coend model.",
+          "silent": false,
+          "descriptions": [
+            "A base arrow q changes the target fibre and the endpoint of f.",
+            "Represented restriction recovers the transport comparison in the stated direction."
+          ]
+        },
+        {
+          "id": "r05-01",
+          "sceneId": "coefficient",
+          "title": "The coefficient category",
+          "startFrame": 6833,
+          "durationFrames": 580,
+          "speechFrames": 556,
+          "text": "Three pieces of notation organize the whole construction. U is the admitted coefficient for families. P of an index category retains the presheaf-like values together with their higher mapping profile. The coefficient category, written with a calligraphic Q, has the Cartesian hom categories shown in the first formula.",
+          "silent": false,
+          "descriptions": [
+            "P retains the index mapping profile; the coefficient category has these Cartesian hom categories.",
+            "The whole y-dependence is a Q-valued transformation between represented diagrams."
+          ]
+        },
+        {
+          "id": "r05-02",
+          "sceneId": "coefficient",
+          "title": "The coefficient category",
+          "startFrame": 7413,
+          "durationFrames": 652,
+          "speechFrames": 628,
+          "text": "Now fix x and consider its representable family. Send both that family and E through the represented inclusion into the coefficient category. The transformations between those two diagrams form S sub E of x. This is where the entire dependence on y is retained as one categorical object.",
+          "silent": false,
+          "descriptions": [
+            "P retains the index mapping profile; the coefficient category has these Cartesian hom categories.",
+            "The whole y-dependence is a Q-valued transformation between represented diagrams."
+          ]
+        },
+        {
+          "id": "r05-03",
+          "sceneId": "coefficient",
+          "title": "The coefficient category",
+          "startFrame": 8065,
+          "durationFrames": 686,
+          "speechFrames": 596,
+          "text": "The type of one component can be unfolded into an ordinary functor category. But this does not change the composition used by the whole transformation. In particular, it does not manufacture a covariant ordinary family from diagonal point values. The coefficient category keeps the two moving endpoints connected through its own operations.",
+          "silent": false,
+          "descriptions": [
+            "P retains the index mapping profile; the coefficient category has these Cartesian hom categories.",
+            "The whole y-dependence is a Q-valued transformation between represented diagrams."
+          ]
+        },
+        {
+          "id": "r06-01",
+          "sceneId": "ladder",
+          "title": "One Homd, six observations",
+          "startFrame": 8751,
+          "durationFrames": 613,
+          "speechFrames": 589,
+          "text": "The ladder starts with a whole strict root. At a chosen base object x, its component is a functor from the fibre into the opposite of the whole transformation category. Fixing u gives an object of that transformation category. We have already retained all of the y dependence before selecting a particular y.",
+          "silent": false,
+          "descriptions": [
+            "Successive observations of one whole dependent-Hom construction."
+          ]
+        },
+        {
+          "id": "r06-02",
+          "sceneId": "ladder",
+          "title": "One Homd, six observations",
+          "startFrame": 9364,
+          "durationFrames": 564,
+          "speechFrames": 540,
+          "text": "Next observe its component at y. What remains is a functor from the target fibre into the index category P. Choosing v gives an object of P, which has a fixed-object presheaf view on the reversed hom category of base arrows. These are successive observations of the same original construction.",
+          "silent": false,
+          "descriptions": [
+            "Successive observations of one whole dependent-Hom construction."
+          ]
+        },
+        {
+          "id": "r06-03",
+          "sceneId": "ladder",
+          "title": "One Homd, six observations",
+          "startFrame": 9928,
+          "durationFrames": 581,
+          "speechFrames": 557,
+          "text": "Finally apply that presheaf at f. We recover the target-fibre hom displayed earlier. The ladder has therefore carried much more than the endpoint formula: it retains the transformations, functors, and presheaf action that survive at each intermediate stage, where further constructions may need them.",
+          "silent": false,
+          "descriptions": [
+            "Successive observations of one whole dependent-Hom construction."
+          ]
+        },
+        {
+          "id": "r06-04",
+          "sceneId": "ladder",
+          "title": "One Homd, six observations",
+          "startFrame": 10509,
+          "durationFrames": 683,
+          "speechFrames": 593,
+          "text": "The source-contravariant view at x can also be written as a functor from the opposite of E of x into S sub E of x. Opposites preserve object carriers but change higher directions. Neither that observation nor the last leaf identifies all the intermediate categories with a list of pointwise values.",
+          "silent": false,
+          "descriptions": [
+            "Successive observations of one whole dependent-Hom construction."
+          ]
+        },
+        {
+          "id": "r07-01",
+          "sceneId": "variance",
+          "title": "Source and target variance",
+          "startFrame": 11192,
+          "durationFrames": 635,
+          "speechFrames": 611,
+          "text": "The two base variables do not use identical actions. In the target slot, we use represented maps. In the source slot, represented mates make the shifted action covariant on arrows while reversing the next transformation level. The dimension-two reversal records that difference; the outer fibrewise opposite brings the root family back over K.",
+          "silent": false,
+          "descriptions": [
+            "An ordinary factorization model illustrates a noninvertible comparison."
+          ]
+        },
+        {
+          "id": "r07-02",
+          "sceneId": "variance",
+          "title": "Source and target variance",
+          "startFrame": 11827,
+          "durationFrames": 570,
+          "speechFrames": 546,
+          "text": "The target comparison need not be invertible. In an ordinary factorization model, two different arrows can have the same composite after q. The comparison can then forget which factorization was chosen, mapping a two-element set to a singleton. This is a concrete explanation for retaining lax comparison data.",
+          "silent": false,
+          "descriptions": [
+            "An ordinary factorization model illustrates a noninvertible comparison."
+          ]
+        },
+        {
+          "id": "r07-03",
+          "sceneId": "variance",
+          "title": "Source and target variance",
+          "startFrame": 12397,
+          "durationFrames": 784,
+          "speechFrames": 694,
+          "text": "An ordinary negative-section formulation helps explain the required polarity. Its direct higher extension has a separate family-formation obstruction. The current dependent hom uses the whole coefficient-valued transformation instead. The communication draft explains these choices, while its compact notation and future proposed packages retain their stated qualification.",
+          "silent": false,
+          "descriptions": [
+            "An ordinary factorization model illustrates a noninvertible comparison."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "homology",
+      "title": "Whole homology",
+      "startFrame": 13181,
+      "durationFrames": 7727,
+      "steps": [
+        {
+          "id": "r08-01",
+          "sceneId": "zero-input",
+          "title": "Native inputs for homology",
+          "startFrame": 13181,
+          "durationFrames": 625,
+          "speechFrames": 601,
+          "text": "We now turn to homology. At one degree, a complex provides an incoming differential, an outgoing differential, and their zero composite. The native input retains this information as a diagram and a whole diagram map. A map of inputs must retain the compatible maps of the same objects and arrows.",
+          "silent": false,
+          "descriptions": [
+            "A one-degree chain-zero input retains adjacent differentials and their zero composition."
+          ]
+        },
+        {
+          "id": "r08-02",
+          "sceneId": "zero-input",
+          "title": "Native inputs for homology",
+          "startFrame": 13806,
+          "durationFrames": 618,
+          "speechFrames": 594,
+          "text": "This is the bridge from the dependent hom language. The native category of inputs already has its Hom structure and categorical action. We can apply whole universal operations to it, so the resulting homology comes with an action on maps. The leaf dependent hom formula alone is not a homology algorithm.",
+          "silent": false,
+          "descriptions": [
+            "A one-degree chain-zero input retains adjacent differentials and their zero composition."
+          ]
+        },
+        {
+          "id": "r08-03",
+          "sceneId": "zero-input",
+          "title": "Native inputs for homology",
+          "startFrame": 14424,
+          "durationFrames": 748,
+          "speechFrames": 658,
+          "text": "The homological development works under the book’s ordinary additive and structural hypotheses. Kernel and cokernel operations will be supplied as whole adjunctions. Later, short-exact rows and normality support the connecting map and exactness proofs. Keeping these assumptions visible tells us which mathematical result is actually being constructed.",
+          "silent": false,
+          "descriptions": [
+            "A one-degree chain-zero input retains adjacent differentials and their zero composition."
+          ]
+        },
+        {
+          "id": "r09-01",
+          "sceneId": "adjoints",
+          "title": "Kernel and cokernel adjunctions",
+          "startFrame": 15172,
+          "durationFrames": 634,
+          "speechFrames": 610,
+          "text": "Let the target be the qualified ordinary additive category. Its zero object defines two embeddings into the walking-arrow diagram category: one sends A to the arrow from A to zero, and the other to the arrow from zero to A. The native diagram interface uses its specified oplax profile.",
+          "silent": false,
+          "descriptions": [
+            "The zero object defines two embeddings into the diagram category.",
+            "Kernels and cokernels are retained as whole adjoint functors.",
+            "Adjoint mates provide universal factors and their reconstruction equations."
+          ]
+        },
+        {
+          "id": "r09-02",
+          "sceneId": "adjoints",
+          "title": "Kernel and cokernel adjunctions",
+          "startFrame": 15806,
+          "durationFrames": 636,
+          "speechFrames": 612,
+          "text": "A whole kernel functor is right adjoint to the first embedding. A whole cokernel functor is left adjoint to the second. The counit gives kernel inclusions, and the unit gives cokernel projections. These are observations of the supplied adjunction structures, rather than independently selected objects with unrelated factor records.",
+          "silent": false,
+          "descriptions": [
+            "The zero object defines two embeddings into the diagram category.",
+            "Kernels and cokernels are retained as whole adjoint functors.",
+            "Adjoint mates provide universal factors and their reconstruction equations."
+          ]
+        },
+        {
+          "id": "r09-03",
+          "sceneId": "adjoints",
+          "title": "Kernel and cokernel adjunctions",
+          "startFrame": 16442,
+          "durationFrames": 728,
+          "speechFrames": 638,
+          "text": "Adjoint transposition supplies the universal factors. The displayed equations are their familiar endpoint reconstructions. The same operations apply to whole families through the qualified adjunction lift. Consequently the caller can supply a whole transformation and obtain its mate, with the relevant naturality retained by the construction.",
+          "silent": false,
+          "descriptions": [
+            "The zero object defines two embeddings into the diagram category.",
+            "Kernels and cokernels are retained as whole adjoint functors.",
+            "Adjoint mates provide universal factors and their reconstruction equations."
+          ]
+        },
+        {
+          "id": "r10-01",
+          "sceneId": "whole-homology",
+          "title": "The whole homology functor",
+          "startFrame": 17170,
+          "durationFrames": 580,
+          "speechFrames": 556,
+          "text": "Apply the kernel operation to the outgoing differential to obtain cycles. The zero-composition input has an adjoint mate into those cycles, giving the boundary map beta. We then apply the original cokernel operation to the arrow family of beta. This is the whole homology construction.",
+          "silent": false,
+          "descriptions": [
+            "The incoming differential factors through the chosen outgoing kernel.",
+            "The whole boundary transformation feeds the same cokernel operation."
+          ]
+        },
+        {
+          "id": "r10-02",
+          "sceneId": "whole-homology",
+          "title": "The whole homology functor",
+          "startFrame": 17750,
+          "durationFrames": 566,
+          "speechFrames": 542,
+          "text": "The familiar object formula is one observation of a functor on native inputs. When a chain map is introduced as a map of those inputs, the action of H produces the induced map on homology. Its cycle and quotient equations are inherited from the whole transformations used in the definition.",
+          "silent": false,
+          "descriptions": [
+            "The incoming differential factors through the chosen outgoing kernel.",
+            "The whole boundary transformation feeds the same cokernel operation."
+          ]
+        },
+        {
+          "id": "r10-03",
+          "sceneId": "whole-homology",
+          "title": "The whole homology functor",
+          "startFrame": 18316,
+          "durationFrames": 679,
+          "speechFrames": 589,
+          "text": "The selected objects matter. We do not replace a cycle object or quotient by a convenient isomorphic presentation without retaining the comparison maps. When two presentations are compared, applying the original cokernel functor to actual boundary-diagram maps exposes the action and preserves the corresponding inverse data.",
+          "silent": false,
+          "descriptions": [
+            "The incoming differential factors through the chosen outgoing kernel.",
+            "The whole boundary transformation feeds the same cokernel operation."
+          ]
+        },
+        {
+          "id": "r11-01",
+          "sceneId": "parameter-families",
+          "title": "Families and induced maps",
+          "startFrame": 18995,
+          "durationFrames": 614,
+          "speechFrames": 590,
+          "text": "Suppose a parameter category B indexes the construction. We supply whole functors for the incoming object and outgoing diagram, together with one whole transformation expressing their compatibility. Gamma classifies that coherent family into the native input category, retaining the action already present in those data.",
+          "silent": false,
+          "descriptions": [
+            "A coherent family is specified by whole functors and a whole diagram transformation.",
+            "Gamma classifies the coherent family into the native input category.",
+            "The family and global constructions are related by a whole comparison with inverse data."
+          ]
+        },
+        {
+          "id": "r11-02",
+          "sceneId": "parameter-families",
+          "title": "Families and induced maps",
+          "startFrame": 19609,
+          "durationFrames": 586,
+          "speechFrames": 562,
+          "text": "There are then two ways to describe homology: perform the construction on the family, or apply the global native homology functor after Gamma. Actual boundary-diagram comparisons and the original cokernel operation give the whole comparison shown here, including its inverse data.",
+          "silent": false,
+          "descriptions": [
+            "A coherent family is specified by whole functors and a whole diagram transformation.",
+            "Gamma classifies the coherent family into the native input category.",
+            "The family and global constructions are related by a whole comparison with inverse data."
+          ]
+        },
+        {
+          "id": "r11-03",
+          "sceneId": "parameter-families",
+          "title": "Families and induced maps",
+          "startFrame": 20195,
+          "durationFrames": 713,
+          "speechFrames": 623,
+          "text": "Evaluating at a parameter recovers an ordinary point observation. The whole result is stronger because it also retains variation across the parameter category. This is the recurring purpose of the architecture: preserve the maps that the next construction needs, under the actual ordinary-target and structural profiles of the current implementation.",
+          "silent": false,
+          "descriptions": [
+            "A coherent family is specified by whole functors and a whole diagram transformation.",
+            "Gamma classifies the coherent family into the native input category.",
+            "The family and global constructions are related by a whole comparison with inverse data."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "connecting",
+      "title": "Connecting maps and exactness",
+      "startFrame": 20908,
+      "durationFrames": 4227,
+      "steps": [
+        {
+          "id": "r12-01",
+          "sceneId": "connecting",
+          "title": "The connecting transformation",
+          "startFrame": 20908,
+          "durationFrames": 564,
+          "speechFrames": 540,
+          "text": "Consider a degreewise short exact sequence of complexes. We want to send a homology class in D to one degree lower in A. The source cycle object is the kernel of the differential in D. Taking the kernel of its composite with the row projection gives the object L on the slide.",
+          "silent": false,
+          "descriptions": [
+            "Degreewise short-exact rows are compatible with the differentials.",
+            "The cycle lift cover and the map to target homology retain the original universal data.",
+            "Two universal descents first reach source cycles and then source homology.",
+            "The reconstruction equation characterizes the whole connecting transformation."
+          ]
+        },
+        {
+          "id": "r12-02",
+          "sceneId": "connecting",
+          "title": "The connecting transformation",
+          "startFrame": 21472,
+          "durationFrames": 611,
+          "speechFrames": 587,
+          "text": "The resulting map from L to the source cycles is an epimorphic cover under the stated hypotheses. Apply the middle differential to the inclusion of L into B. Row commutation makes that result vanish under the lower projection, so exactness and the original kernel operation lift it into the cycles of A.",
+          "silent": false,
+          "descriptions": [
+            "Degreewise short-exact rows are compatible with the differentials.",
+            "The cycle lift cover and the map to target homology retain the original universal data.",
+            "Two universal descents first reach source cycles and then source homology.",
+            "The reconstruction equation characterizes the whole connecting transformation."
+          ]
+        },
+        {
+          "id": "r12-03",
+          "sceneId": "connecting",
+          "title": "The connecting transformation",
+          "startFrame": 22083,
+          "durationFrames": 572,
+          "speechFrames": 548,
+          "text": "Passing to target homology gives theta. It kills the kernel of the cover, so it descends first to source cycles. That map then kills the source boundaries, so it descends through the original homology quotient. These are the two universal descents that produce the connecting transformation delta.",
+          "silent": false,
+          "descriptions": [
+            "Degreewise short-exact rows are compatible with the differentials.",
+            "The cycle lift cover and the map to target homology retain the original universal data.",
+            "Two universal descents first reach source cycles and then source homology.",
+            "The reconstruction equation characterizes the whole connecting transformation."
+          ]
+        },
+        {
+          "id": "r12-04",
+          "sceneId": "connecting",
+          "title": "The connecting transformation",
+          "startFrame": 22655,
+          "durationFrames": 628,
+          "speechFrames": 538,
+          "text": "The reconstruction equation records the result, and the same cover proves uniqueness. No linear splitting of the row projection has been selected. Lifts, covers and descents were whole operations throughout, so their action supplies the naturality of delta before we observe an individual component.",
+          "silent": false,
+          "descriptions": [
+            "Degreewise short-exact rows are compatible with the differentials.",
+            "The cycle lift cover and the map to target homology retain the original universal data.",
+            "Two universal descents first reach source cycles and then source homology.",
+            "The reconstruction equation characterizes the whole connecting transformation."
+          ]
+        },
+        {
+          "id": "r13-01",
+          "sceneId": "window",
+          "title": "Exactness of a homology window",
+          "startFrame": 23283,
+          "durationFrames": 571,
+          "speechFrames": 547,
+          "text": "The connecting transformation completes a five-term homology window. There are three interior exactness assertions: at the middle homology, at the source of delta, and at its target. Each assertion concerns the actual incoming and outgoing arrows at that position.",
+          "silent": false,
+          "descriptions": [
+            "The connecting map completes the five-term homology window.",
+            "Exactness uses the fixed canonical comparison for each actual adjacent pair."
+          ]
+        },
+        {
+          "id": "r13-02",
+          "sceneId": "window",
+          "title": "Exactness of a homology window",
+          "startFrame": 23854,
+          "durationFrames": 566,
+          "speechFrames": 542,
+          "text": "Exactness is expressed through the canonical comparison from the image of the incoming map to the kernel of the outgoing map. The relevant witness makes this fixed comparison invertible and retains its inverse data. It is stronger bookkeeping than observing that two endpoint objects happen to be isomorphic.",
+          "silent": false,
+          "descriptions": [
+            "The connecting map completes the five-term homology window.",
+            "Exactness uses the fixed canonical comparison for each actual adjacent pair."
+          ]
+        },
+        {
+          "id": "r13-03",
+          "sceneId": "window",
+          "title": "Exactness of a homology window",
+          "startFrame": 24420,
+          "durationFrames": 715,
+          "speechFrames": 625,
+          "text": "The proofs use whole lifts, additive differences, quotient descent, and cancellation through the original covers. Normality supplies the needed comparison inverses. Adjacent finite windows share their selected boundary arrows, so later assembly retains one coherent diagram instead of repeatedly choosing new representatives of its endpoints.",
+          "silent": false,
+          "descriptions": [
+            "The connecting map completes the five-term homology window.",
+            "Exactness uses the fixed canonical comparison for each actual adjacent pair."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "example",
+      "title": "A nonsplit calculation",
+      "startFrame": 25135,
+      "durationFrames": 6085,
+      "steps": [
+        {
+          "id": "r14-01",
+          "sceneId": "example",
+          "title": "A nonsplit polynomial example",
+          "startFrame": 25135,
+          "durationFrames": 611,
+          "speechFrames": 587,
+          "text": "Take R to be the rational polynomial ring in x, and S its quotient by x. The two complexes A and B each have multiplication by x as their differential. The quotient complex D has S in both supported degrees and the zero quotient differential.",
+          "silent": false,
+          "descriptions": [
+            "Work with the polynomial ring over the rationals and its quotient module.",
+            "The three complexes are supported in degrees one and zero.",
+            "Multiplication by x and quotient projection give each short-exact row."
+          ]
+        },
+        {
+          "id": "r14-02",
+          "sceneId": "example",
+          "title": "A nonsplit polynomial example",
+          "startFrame": 25746,
+          "durationFrames": 538,
+          "speechFrames": 514,
+          "text": "Multiplication by x in both degrees gives the map from A to B, and quotient projection gives the map from B to D. Each supported row is the short exact sequence on the slide. The differentials and row maps commute, so these rows form a short exact sequence of complexes.",
+          "silent": false,
+          "descriptions": [
+            "Work with the polynomial ring over the rationals and its quotient module.",
+            "The three complexes are supported in degrees one and zero.",
+            "Multiplication by x and quotient projection give each short-exact row."
+          ]
+        },
+        {
+          "id": "r14-03",
+          "sceneId": "example",
+          "title": "A nonsplit polynomial example",
+          "startFrame": 26284,
+          "durationFrames": 607,
+          "speechFrames": 517,
+          "text": "These rows do not split R linearly. Any R-linear map from S back to R must send the class of one to an element annihilated by x. Multiplication by x is injective on R, so that element is zero. Such a map cannot be a section of the quotient projection.",
+          "silent": false,
+          "descriptions": [
+            "Work with the polynomial ring over the rationals and its quotient module.",
+            "The three complexes are supported in degrees one and zero.",
+            "Multiplication by x and quotient projection give each short-exact row."
+          ]
+        },
+        {
+          "id": "r15-01",
+          "sceneId": "compute-delta",
+          "title": "Computing the connecting map",
+          "startFrame": 26891,
+          "durationFrames": 616,
+          "speechFrames": 592,
+          "text": "The homology groups are easy to identify in this example. Multiplication by x has zero kernel on R and cokernel S. The zero differential on S gives S in both homological positions. We can therefore compute the interesting connecting map as a map from S to S.",
+          "silent": false,
+          "descriptions": [
+            "The homology modules in the supported degrees have these identifications.",
+            "Lift a representative and apply the middle differential.",
+            "Under the stated identifications the connecting map is the positive identity."
+          ]
+        },
+        {
+          "id": "r15-02",
+          "sceneId": "compute-delta",
+          "title": "Computing the connecting map",
+          "startFrame": 27507,
+          "durationFrames": 503,
+          "speechFrames": 479,
+          "text": "Represent a class in the first homology of D by the class of r, and lift it to r in the middle complex. Applying the differential gives x times r. This lies in the image of the lower inclusion, and its corresponding element in A is r itself.",
+          "silent": false,
+          "descriptions": [
+            "The homology modules in the supported degrees have these identifications.",
+            "Lift a representative and apply the middle differential.",
+            "Under the stated identifications the connecting map is the positive identity."
+          ]
+        },
+        {
+          "id": "r15-03",
+          "sceneId": "compute-delta",
+          "title": "Computing the connecting map",
+          "startFrame": 28010,
+          "durationFrames": 566,
+          "speechFrames": 542,
+          "text": "Passing to the quotient gives the original class of r in the zeroth homology of A. Thus delta one is the identity on S, with the positive sign of the stated conventions. The connecting morphism is nonzero even though the degreewise rows have no R-linear splitting.",
+          "silent": false,
+          "descriptions": [
+            "The homology modules in the supported degrees have these identifications.",
+            "Lift a representative and apply the middle differential.",
+            "Under the stated identifications the connecting map is the positive identity."
+          ]
+        },
+        {
+          "id": "r15-04",
+          "sceneId": "compute-delta",
+          "title": "Computing the connecting map",
+          "startFrame": 28576,
+          "durationFrames": 652,
+          "speechFrames": 562,
+          "text": "Changing the representative from r to r plus x times u changes the answer by a boundary. This explains independence of the choice in the representative calculation. The whole construction packages that independence through universal lifting and descent, preserving the selected quotient and its action on further maps.",
+          "silent": false,
+          "descriptions": [
+            "The homology modules in the supported degrees have these identifications.",
+            "Lift a representative and apply the middle differential.",
+            "Under the stated identifications the connecting map is the positive identity."
+          ]
+        },
+        {
+          "id": "r16-01",
+          "sceneId": "presentations",
+          "title": "The sequence and its presentations",
+          "startFrame": 29228,
+          "durationFrames": 602,
+          "speechFrames": 578,
+          "text": "After the stated identifications, the nontrivial part of the long exact sequence has the form displayed here. The connecting map is an identity, the next map is zero, and the following projection is again an identity. The retained computational presentation contains more information than this simplified display.",
+          "silent": false,
+          "descriptions": [
+            "This is the simplified nontrivial mathematical display after identifying the nonzero homologies with S.",
+            "The retained raw matrices represent the stated maps on the quotient modules."
+          ]
+        },
+        {
+          "id": "r16-02",
+          "sceneId": "presentations",
+          "title": "The sequence and its presentations",
+          "startFrame": 29830,
+          "durationFrames": 606,
+          "speechFrames": 582,
+          "text": "In particular, the program represents the zero homology map induced by the inclusion using the polynomial matrix x. That is compatible with a zero quotient map because x is a relation in the target. A coefficient witness records the corresponding equation; inspecting matrix entries alone would miss its meaning.",
+          "silent": false,
+          "descriptions": [
+            "This is the simplified nontrivial mathematical display after identifying the nonzero homologies with S.",
+            "The retained raw matrices represent the stated maps on the quotient modules."
+          ]
+        },
+        {
+          "id": "r16-03",
+          "sceneId": "presentations",
+          "title": "The sequence and its presentations",
+          "startFrame": 30436,
+          "durationFrames": 784,
+          "speechFrames": 694,
+          "text": "The selected final homology presentation also retains both relation columns, x and x. The concrete formal certificate refers to the actual selected diagram, with eight objects, seven arrows, and six interior positions. It does not certify a fresh list of independently replaced endpoints merely because they have familiar isomorphism classes.",
+          "silent": false,
+          "descriptions": [
+            "This is the simplified nontrivial mathematical display after identifying the nonzero homologies with S.",
+            "The retained raw matrices represent the stated maps on the quotient modules."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scope",
+      "title": "Evidence and scope",
+      "startFrame": 31220,
+      "durationFrames": 3382,
+      "steps": [
+        {
+          "id": "r17-01",
+          "sceneId": "evidence",
+          "title": "Computation, interpretation and proof",
+          "startFrame": 31220,
+          "durationFrames": 548,
+          "speechFrames": 524,
+          "text": "It is useful to separate three kinds of evidence. Effective algebra returns selected presentations, matrices, and coefficient witnesses. These are useful computational results even before a proof interface is invoked. Retaining them allows a later construction to use the same objects and maps.",
+          "silent": false,
+          "descriptions": []
+        },
+        {
+          "id": "r17-02",
+          "sceneId": "evidence",
+          "title": "Computation, interpretation and proof",
+          "startFrame": 31768,
+          "durationFrames": 560,
+          "speechFrames": 536,
+          "text": "The interpretation layer supplies the whole model and its normality, together with agreements between the categorical operations and the chosen concrete data. Those semantic contracts are not established by checking a list of matrix entries. Complete arrow interpretations retain the source, target, and map together.",
+          "silent": false,
+          "descriptions": []
+        },
+        {
+          "id": "r17-03",
+          "sceneId": "evidence",
+          "title": "Computation, interpretation and proof",
+          "startFrame": 32328,
+          "durationFrames": 752,
+          "speechFrames": 662,
+          "text": "The native proofs then derive exactness at the fixed canonical comparisons and assemble the displayed certificate. The constructor adds no new assumption of output exactness. This is a substantive conditional result, while a closed construction of every concrete model and a general correctness theorem for the algebra engine remain separate work.",
+          "silent": false,
+          "descriptions": []
+        },
+        {
+          "id": "r18-01",
+          "sceneId": "closing",
+          "title": "Scope and further reading",
+          "startFrame": 33080,
+          "durationFrames": 676,
+          "speechFrames": 652,
+          "text": "The thread through the talk is the retention of action. The dependent hom ladder observes one coherent construction at successively fixed parameters. Whole universal operations then use the native input structure to build homology, induced maps, and a connecting transformation with its reconstruction and exactness properties.",
+          "silent": false,
+          "descriptions": []
+        },
+        {
+          "id": "r18-02",
+          "sceneId": "closing",
+          "title": "Scope and further reading",
+          "startFrame": 33756,
+          "durationFrames": 846,
+          "speechFrames": 756,
+          "text": "The nonsplit example shows why those interfaces matter in a calculation. It also shows why presentations, relations, and interpretations must remain visible. For a closer account, read the current book alongside the consolidated dependent hom communication. The mathematical programme continues beyond these qualified interfaces, with its broader models and metatheory still explicit research questions.",
+          "silent": false,
+          "descriptions": []
+        }
+      ]
+    }
+  ],
+  "hashes": {
+    "assets/fonts/mono.ttf": "c805f9436dbc268644c1d9584f01a601a653e028e08fd74b9b949f6cf8304d88",
+    "assets/fonts/sans.ttf": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280",
+    "assets/fonts/serif-bold.ttf": "847b33e13925f19ff87e4d934d6b3cf7cac35ce16424f6f670e40c2f377cf2df",
+    "assets/gsap.min.js": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+    "assets/hyperframe.runtime.iife.js": "a8f1a11058cae448e7603169189feeb4c452c834fbff9e1383429e52d49114ef",
+    "assets/hyperframes-player.global.js": "7e1fe1f0f67336d412c6e4059d70403388d17724f07bf343d0f7e706d6b11d21",
+    "assets/katex/fonts/KaTeX_AMS-Regular.ttf": "68534840bcfdd2bffb6f0e8deb48684dd01e7f04ea2813267577afb906de1d13",
+    "assets/katex/fonts/KaTeX_AMS-Regular.woff": "30da91e84c893f875e252689faebdc590b2871145e8adc7f9a9d4dbd8ce0b251",
+    "assets/katex/fonts/KaTeX_AMS-Regular.woff2": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308",
+    "assets/katex/fonts/KaTeX_Caligraphic-Bold.ttf": "07d8e303ce4fc12b4bb54f1004170dd190a1f3db45d400fe68060df3e0897268",
+    "assets/katex/fonts/KaTeX_Caligraphic-Bold.woff": "1ae6bd7475590e97e7f145a89e09ccde322f7a6bc0b91607b1c8b8ee28290fed",
+    "assets/katex/fonts/KaTeX_Caligraphic-Bold.woff2": "de7701e42cf1f4cf0b766c03fb27977207eee2f4fd5d76fa82188406da43ea4c",
+    "assets/katex/fonts/KaTeX_Caligraphic-Regular.ttf": "ed0b74372feefcbb9c0666b2e210da37b7e49fa7fbbf3eeb11db5f693dacfbb7",
+    "assets/katex/fonts/KaTeX_Caligraphic-Regular.woff": "3398dd02302557a793f2863f88e02d96ce10df2abffa07c8e9fa90775116e65c",
+    "assets/katex/fonts/KaTeX_Caligraphic-Regular.woff2": "5d53e70ad607c2352162dec9e0923fb54ecdafaccbf604cd8dcf7d00facb989b",
+    "assets/katex/fonts/KaTeX_Fraktur-Bold.ttf": "9163df9c7122432e6495b4229fa9071cf9ae86a758ae5efc4924ec2e1a6dbce1",
+    "assets/katex/fonts/KaTeX_Fraktur-Bold.woff": "9be7ceb88004ab8ad124082246fbfcca4091e36385d4ec6ed1df67375dad50fb",
+    "assets/katex/fonts/KaTeX_Fraktur-Bold.woff2": "74444efd593c005e3f4573b44524704c0af0a937fe911cca9e94068d0d140d3f",
+    "assets/katex/fonts/KaTeX_Fraktur-Regular.ttf": "1e6f9579e90e2cac37f8f60a597c436e075c114385652b7cbeb0dec0421291b3",
+    "assets/katex/fonts/KaTeX_Fraktur-Regular.woff": "5e28753be717dac97f559f49bc10be9cf3c124ddcabda6659d11cb68febc6463",
+    "assets/katex/fonts/KaTeX_Fraktur-Regular.woff2": "51814d270d06ff0255dba0799994fa4d8c84d11f09951d47595f4abb1f3602dc",
+    "assets/katex/fonts/KaTeX_Main-Bold.ttf": "138ac28d1663b3037e9c5f52371fa5c63d8324f4a38d22cd573e6ea3a3fd0cf8",
+    "assets/katex/fonts/KaTeX_Main-Bold.woff": "c76c5d696297d51b9cb1639c7da4334f0e7dec81b42b11213b5e25ef671bb822",
+    "assets/katex/fonts/KaTeX_Main-Bold.woff2": "0f60d1b897938ec918c8ce073092411baf9438f6739465693ff18b0f9d20b021",
+    "assets/katex/fonts/KaTeX_Main-BoldItalic.ttf": "70ee1f64a20f2048c21940ef46d0144fd215baa953ca69afd1e31e98544f708f",
+    "assets/katex/fonts/KaTeX_Main-BoldItalic.woff": "a6f7ec0d846ac7ad975adb8959c37ed49b94acbc4ae436db9ce9e20287e4a64c",
+    "assets/katex/fonts/KaTeX_Main-BoldItalic.woff2": "99cd42a3c072d918f2f44984a807cf7aa16e13545fd0875fc07c6c65f99e715b",
+    "assets/katex/fonts/KaTeX_Main-Italic.ttf": "0d85ae7cc30f23790a7f1a58c4a112fdca8aae769b6ba11429af1d98b1b6cb3a",
+    "assets/katex/fonts/KaTeX_Main-Italic.woff": "f1d6ef86f3b11a528bd5185199bd2443ecb2b0dead96d88674b5a2c12be24bdf",
+    "assets/katex/fonts/KaTeX_Main-Italic.woff2": "97479ca6cce906abc961ecac96faa5f9ca2e61b8e7670d475826bcdee9a7c267",
+    "assets/katex/fonts/KaTeX_Main-Regular.ttf": "d0332f52868370fd83ae7fa46470f90c8f2eab2fcf12bc4f88080b340c95a830",
+    "assets/katex/fonts/KaTeX_Main-Regular.woff": "c6368d87e8a1a3a5d337623d83d8dc4b868f242a9ad476237d6f8d1e0f168cdc",
+    "assets/katex/fonts/KaTeX_Main-Regular.woff2": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866",
+    "assets/katex/fonts/KaTeX_Math-BoldItalic.ttf": "f9377ab0271cda59af24bcffbd46a4d0c8a3572ffafdbb38de2ad5ea7b0d5ee5",
+    "assets/katex/fonts/KaTeX_Math-BoldItalic.woff": "850c0af5c2238497febaf5e461d880bf458c341f42f4f330f1b1ab5698b1998e",
+    "assets/katex/fonts/KaTeX_Math-BoldItalic.woff2": "dc47344dbb6cb5b655c8460d561f4df5f501b90c804ad3c6cec65fe322351ab1",
+    "assets/katex/fonts/KaTeX_Math-Italic.ttf": "08ce98e51b04d58945a301e639e02b6998af29fdfd61a7b8afdd07bbfc479d4a",
+    "assets/katex/fonts/KaTeX_Math-Italic.woff": "8a8d244581371912b8f3f5a23e2437cb2a59cd9bcaebb0346e722c05737a2571",
+    "assets/katex/fonts/KaTeX_Math-Italic.woff2": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264",
+    "assets/katex/fonts/KaTeX_SansSerif-Bold.ttf": "1ece03f79f95277d57dc7f6b435a74e1379b0d46104a8530286b60ff49369ea0",
+    "assets/katex/fonts/KaTeX_SansSerif-Bold.woff": "ece03cfd83e22c212cdef66feb8442d25a083beb988db3f1883f3f9738d750ba",
+    "assets/katex/fonts/KaTeX_SansSerif-Bold.woff2": "e99ae51144bf1232efcc1bfe5add36262c6866b0faab24fa75740e1b98577a62",
+    "assets/katex/fonts/KaTeX_SansSerif-Italic.ttf": "3931dd81faed86ba021bb2bbdc36f5bed9a38d6b4f4077aca59b265aa1b02083",
+    "assets/katex/fonts/KaTeX_SansSerif-Italic.woff": "91ee67500cc0129aa0ace3ac5c61ff1692102f0f31d02b69347fba35dcb75bf2",
+    "assets/katex/fonts/KaTeX_SansSerif-Italic.woff2": "00b26ac825e2095056396e0553b8ac26d3f8ad158c3826e28b4c45b385c4714a",
+    "assets/katex/fonts/KaTeX_SansSerif-Regular.ttf": "f36ea897e19f4a2e571d1e900e4e3710e438deb05a842486045ba0a3e616a4ad",
+    "assets/katex/fonts/KaTeX_SansSerif-Regular.woff": "11e4dc8a6471ff6d6ee561d53d10fde8f7489e798257ff449c5d37c197435605",
+    "assets/katex/fonts/KaTeX_SansSerif-Regular.woff2": "68e8c73ef42afd3ccec58bf0fba302cce448938e7fc020a5e31f8a952eee1342",
+    "assets/katex/fonts/KaTeX_Script-Regular.ttf": "1c67f068fea8bb09bf099c088b1cf64bd27516a6e07f4684344873564bb66a67",
+    "assets/katex/fonts/KaTeX_Script-Regular.woff": "d96cdf2b3bdd4d64a8fd5f74a4c467f123a8a73931cd435889f08ffaf9bf947a",
+    "assets/katex/fonts/KaTeX_Script-Regular.woff2": "036d4e95149b69ff9bcc0cd55771efeb25ffa3947293e69acd78d5ac328c684b",
+    "assets/katex/fonts/KaTeX_Size1-Regular.ttf": "95b6d2f1a50173bfedb8c63e1d1c99b10427d0a4df4201cb44513b226951a22b",
+    "assets/katex/fonts/KaTeX_Size1-Regular.woff": "c943cc986384f59e86bea5fd7dc50a9c4dfe567a7c05eb40d6790720dead97c9",
+    "assets/katex/fonts/KaTeX_Size1-Regular.woff2": "6b47c40166b6dbe21a5dfca7718413f2147fd2399be1ba605d8ad39cedf25dfe",
+    "assets/katex/fonts/KaTeX_Size2-Regular.ttf": "a6b2099fb555c60e3a0db3a08842ebf1d732c6eb4e4bf44913613bed4fc4e39b",
+    "assets/katex/fonts/KaTeX_Size2-Regular.woff": "2014c523c3210bcc166648c4d4cc57f05b747df07a24277bf71c51e67dc79e3d",
+    "assets/katex/fonts/KaTeX_Size2-Regular.woff2": "d04c54219f9eaec6d4d4fd42dfb28785975a4794d6b2fc71e566b9cd6db842dd",
+    "assets/katex/fonts/KaTeX_Size3-Regular.ttf": "500e04d54f0d51666332c9d2089aa803be22aa878eca539e59fa53c6e522b082",
+    "assets/katex/fonts/KaTeX_Size3-Regular.woff": "6ab6b62e9b62dae2c00dd90f791bd10950be0ecc3490d7d6045f51c2e8fe0949",
+    "assets/katex/fonts/KaTeX_Size3-Regular.woff2": "73d591271b1604960cb10bb90fee021670af7297017e0e98480b332d11f51995",
+    "assets/katex/fonts/KaTeX_Size4-Regular.ttf": "c647367d1dd4e162468717d020e1fc0f1dc5c26ebfdffbe55261713bf88c5877",
+    "assets/katex/fonts/KaTeX_Size4-Regular.woff": "99f9c6750b489c9462bf04900bd3f939df9b829339daaaaa99ef5495cdddea58",
+    "assets/katex/fonts/KaTeX_Size4-Regular.woff2": "a4af7d414440a1c1790825cfb700cf9cf43b0f2c4b04f0ebc523011ad9853ec0",
+    "assets/katex/fonts/KaTeX_Typewriter-Regular.ttf": "f01f3e87d9c6a61c0c081ceb577abd864eb00a612f7ac1620dd6915fad2ef5aa",
+    "assets/katex/fonts/KaTeX_Typewriter-Regular.woff": "e14fed02b1aba7ce9f5afd5844b5d0321b22351febc720e0de8b8723527609f7",
+    "assets/katex/fonts/KaTeX_Typewriter-Regular.woff2": "71d517d67827787cfabdf186914cc3358eda539e37931941f2b2fd4a21f68c0b",
+    "assets/katex/katex.min.css": "0289a02cf451a44dd73add683a09644252363871ac11713a647b732cee8b1ee3",
+    "AUDIO_ENCODING.json": "5c017e714f2e927f33c6ecea42df4bc5283bad4316622d11485c5a5e3db8b53d",
+    "captions.vtt": "6987cf359a58f09ef3edc683175465d70263ea88a8c1d070e86aff6705dcbb79",
+    "index.html": "749f925f779720fc60225682429289a458a0a9aefcb30adeaddeb304093e2b1d",
+    "licenses/DejaVu-copyright.txt": "63d3ba759d12804c5b31a9d5940d855c1820d1f5999e6b0872eb1c7ff045fbc9",
+    "licenses/HyperFrames-Apache-2.0.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "licenses/KaTeX-LICENSE.txt": "766ccc1f306c885aa45542a9846bbd0a505b27a0374f146778171c2254ce18e3",
+    "presentation/assets/voice.m4a": "3ab36eb25c146a8c0dd61123d701bbd7c9c1ff8f67affa62af99df75cbc41384",
+    "presentation/index.html": "6441bfdc3581b36bd8ed10562574f27ba83fd73e30ebbc9151d7967e750a77a5",
+    "THIRD_PARTY_NOTICES.txt": "6006163ee41bba730a5ee4577dfd018bbc002758ec9895ab5b633a07dfa9d1a9"
+  },
+  "fingerprint": "26b8ea3b7716be2f58da08accec52194e4311a28b0bd77f179a463d75c7e50f6"
+}

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "sourceMasterSha256": "2743175e36eabeb6bb52ec104274c55eddb77055a7af80a462a8858bb7a3d6bf",
+  "sourceNativeFingerprint": "a1420948ed44cc8ef4fe0e43d2d0e6a4f4ccea76e01867cc84341ab2fc56ec41",
+  "codec": "AAC-LC",
+  "channels": 1,
+  "sampleRate": 24000,
+  "targetBitrateKbps": 48,
+  "measuredDurationSeconds": 1153.4,
+  "frames": 34602,
+  "fps": 30,
+  "providerRequests": 0
+}

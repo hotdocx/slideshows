@@ -1,0 +1,4 @@
+HyperFrames 0.8.110: Apache-2.0; https://github.com/heygen-com/hyperframes
+GSAP: standard license; https://gsap.com/standard-license/ (original distribution notices retained)
+KaTeX: MIT; see licenses/KaTeX-LICENSE.txt.
+DejaVu fonts: see licenses/DejaVu-copyright.txt.
