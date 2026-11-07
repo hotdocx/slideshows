@@ -15,3 +15,6 @@ both standalone playback and the GetPaidX native import contract before upload.
 The Node server is an optional local/workspace preview; GitHub Pages requires
 no Node process. Do not repoint the existing lastrevision.pro domain or change
 Emdash's repository or publication workflow as part of this repository.
+
+Use explicit `index.html` links in the gallery. Blob-backed static artifact
+hosts do not necessarily resolve a directory URL to its index file.
