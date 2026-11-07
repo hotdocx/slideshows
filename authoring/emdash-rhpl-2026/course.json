@@ -1,0 +1,1497 @@
+{
+  "version": 2,
+  "kind": "lesson",
+  "id": "emdash-rhpl-homd-homology-2026-11-07",
+  "title": "Functorial Type Theory: Dependent Homs, Homology and Exact Sequences",
+  "audience": "Researchers and graduate students familiar with categories, functors and chain complexes.",
+  "message": "Follow coherent dependent-Hom action through whole universal operations to a nonsplit homology and long-exact-sequence calculation.",
+  "brand": {
+    "name": "Emdash · computational mathematics",
+    "canvas": "#FBFCFE",
+    "surface": "#E9EFF9",
+    "ink": "#182537",
+    "accent": "#224C82"
+  },
+  "presentation": {
+    "profile": "academic",
+    "authors": "The emdash contributors",
+    "shortTitle": "Dependent Homs and Homology"
+  },
+  "sources": [
+    {
+      "url": "https://github.com/hotdocx/emdash",
+      "note": "Current main book 0.10.2-dev and November6 communication at main baseline1c54971f; RHPL papers supply historical perspective only."
+    },
+    {
+      "url": "https://doi.org/10.5281/zenodo.21544186",
+      "note": "Book publication record; the current retained development edition is identified separately."
+    }
+  ],
+  "narration": {
+    "provider": "openai",
+    "disclosure": "ai-generated",
+    "model": "gpt-4o-mini-tts-2025-12-15",
+    "voice": "marin",
+    "instructions": "Read exactly the supplied words as a calm academic author teaching researchers. Use clear measured delivery, about 130 words per minute, with natural sentence pauses. Do not add introductions, conclusions or symbol readings. Keep the voice consistent between units.",
+    "maxRequests": 60,
+    "maxEstimatedUsd": 5
+  },
+  "glossary": [
+    {
+      "term": "Emdash",
+      "spoken": "em dash"
+    },
+    {
+      "term": "hom",
+      "spoken": "hom, as in homomorphism"
+    },
+    {
+      "term": "functor",
+      "spoken": "FUNK-ter"
+    },
+    {
+      "term": "cokernel",
+      "spoken": "co kernel"
+    },
+    {
+      "term": "profunctor",
+      "spoken": "pro FUNK-ter"
+    },
+    {
+      "term": "Lambdapi",
+      "spoken": "lambda pie"
+    }
+  ],
+  "fps": 30,
+  "targetDurationSeconds": 1200,
+  "chapters": [
+    {
+      "id": "question",
+      "title": "The computational question",
+      "scenes": [
+        {
+          "id": "purpose",
+          "title": "Constructions and their induced maps",
+          "subtitle": "",
+          "blocks": [
+            {
+              "id": "purpose",
+              "type": "text",
+              "text": "A reusable mathematical construction retains an object, its action on maps, and the data needed for the next construction."
+            },
+            {
+              "id": "route",
+              "type": "text",
+              "text": "Our route: directed dependency → dependent Hom → whole homology → a nonzero connecting map."
+            },
+            {
+              "id": "scope",
+              "type": "text",
+              "text": "The current main book supplies the mathematics. The RHPL overview supplies the computational perspective."
+            }
+          ],
+          "steps": [
+            {
+              "id": "r01-01",
+              "narration": "A calculation of homology is often only the beginning of a mathematical task. We may next need the map induced by a chain map, or a comparison as the complex varies. This presentation asks how those operations can remain part of the construction itself, rather than being reconstructed from isolated output objects.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "purpose",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r01-02",
+              "narration": "We follow that question through the current Emdash book. The first part explains the dependent hom and its observation ladder. The second builds homology and a connecting transformation from whole universal operations. A nonsplit polynomial example will make the payoff concrete: the connecting map is an identity, even though no linear splitting is available.",
+              "holdSeconds": 3,
+              "actions": [
+                {
+                  "target": "route",
+                  "effect": "reveal",
+                  "at": "start"
+                },
+                {
+                  "target": "scope",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "families",
+          "title": "Directed families and transport",
+          "subtitle": "",
+          "blocks": [
+            {
+              "id": "family",
+              "type": "math",
+              "latex": "E:K\\longrightarrow U,\\qquad U=\\mathsf{Cat}_{\\mathrm{cart}}",
+              "description": "An admitted directed family takes values in the Cartesian coefficient universe.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "fibres",
+              "type": "text",
+              "text": "A fibre E[x] is a category. An arrow f:x→y supplies transport E[f]:E[x]→E[y], together with the declared higher action."
+            },
+            {
+              "id": "total",
+              "type": "math",
+              "latex": "(x,u)\\xrightarrow{(f,a)}(y,v),\\qquad a:E[f](u)\\longrightarrow v",
+              "description": "A total arrow retains both its base arrow and its fibre component above transport.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "profile",
+              "type": "text",
+              "text": "Current convention: strict functors, with the specified lax transformations. The Cartesian coefficient does not make every base comparison invertible."
+            }
+          ],
+          "steps": [
+            {
+              "id": "r02-01",
+              "narration": "Let K be a category of parameters and let E be a directed family. An object x determines a fibre category. A base arrow f supplies a functor between fibres, so an object u in the source fibre can be transported to E of f applied to u in the target fibre.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "family",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r02-02",
+              "narration": "An arrow in the total category must remember that transport. It consists of the base arrow f and a fibre arrow from the transported object to v. The two components are typed together. This is the ordinary picture that motivates the dependent hom formula we will use throughout the first part.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "fibres",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r02-03",
+              "narration": "The current foundations specify the profiles more carefully than that informal picture. Public functors are strict, while transformations retain their stated lax comparisons. Families take values in the Cartesian coefficient universe. These choices control which higher actions exist and in which direction their comparison cells go.",
+              "holdSeconds": 3,
+              "actions": [
+                {
+                  "target": "total",
+                  "effect": "reveal",
+                  "at": "start"
+                },
+                {
+                  "target": "profile",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "homd",
+      "title": "The dependent-Hom ladder",
+      "scenes": [
+        {
+          "id": "leaf",
+          "title": "The dependent Hom",
+          "subtitle": "",
+          "blocks": [
+            {
+              "id": "leaf",
+              "type": "math",
+              "latex": "\\operatorname{homd}_E(x,u)[y][v][f]=\\operatorname{Hom}_{E[y]}(E[f](u),v)",
+              "description": "The fixed dependent-Hom value is a hom category in the target fibre.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "inputs",
+              "type": "text",
+              "text": "Five parameters: x and y in K; u in E[x]; v in E[y]; and f:x→y. The family E remains fixed in this discussion."
+            },
+            {
+              "id": "meaning",
+              "type": "text",
+              "text": "First transport u along f. Then compare that transported object with v inside E[y]. An object of this Hom is a possible fibre component a."
+            },
+            {
+              "id": "question",
+              "type": "text",
+              "text": "The central issue is coherent variation in all five parameters. The leaf formula alone does not specify the whole higher construction."
+            }
+          ],
+          "steps": [
+            {
+              "id": "r03-01",
+              "narration": "The dependent hom has a familiar value once all of its parameters are fixed. Start with u in the fibre over x, transport it along f, and take the hom from that transported object to v in the fibre over y. An object of this hom is precisely a possible fibre component of a total arrow.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "leaf",
+                  "effect": "reveal",
+                  "at": "start"
+                },
+                {
+                  "target": "inputs",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r03-02",
+              "narration": "There are five parameters in this expression: the two base objects, the two fibre objects, and the arrow between the base objects. The displayed value explains one observation. A useful internal construction must also say how the result varies when any of these parameters varies, including the appropriate higher action.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "meaning",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r03-03",
+              "narration": "The distinction is consequential. Two proposals could agree on this final formula while assigning different directions to a higher comparison. We therefore want a whole construction whose successive observations recover the formula, while retaining the variation that later categorical constructions will consume.",
+              "holdSeconds": 3,
+              "actions": [
+                {
+                  "target": "question",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "target",
+          "title": "Variation in the target",
+          "subtitle": "",
+          "blocks": [
+            {
+              "id": "data",
+              "type": "math",
+              "latex": "f:x\\to y,\\quad q:y\\to z,\\quad a:E[f](u)\\to v",
+              "description": "A base arrow q changes the target fibre and the endpoint of f.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "action",
+              "type": "math",
+              "latex": "\\operatorname{homd}_y(v,f)\\longrightarrow\\operatorname{homd}_z(E[q](v),q\\circ f),\\qquad a\\longmapsto E[q](a)",
+              "description": "Represented restriction recovers the transport comparison in the stated direction.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "direction",
+              "type": "text",
+              "text": "Transport supplies a forward comparison. Its direction is mathematical data; it cannot be reversed merely because the fibres look similar."
+            },
+            {
+              "id": "whole",
+              "type": "text",
+              "text": "The full comparison uses the coefficient-category composition. This displayed transport is a represented observation of that comparison."
+            }
+          ],
+          "steps": [
+            {
+              "id": "r04-01",
+              "narration": "Consider a second base arrow q, from y to z. It changes both the target object and the outgoing base arrow: v becomes its transport along q, and f becomes q after f. Applying the transport functor to a gives the forward comparison displayed on the slide.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "data",
+                  "effect": "reveal",
+                  "at": "start"
+                },
+                {
+                  "target": "action",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r04-02",
+              "narration": "This direction is the one supplied by transport. Requesting a comparison in the reverse direction would demand extra structure, and may fail even in an ordinary example. A point formula that suppresses all action can hide this issue, which is why variance belongs in the mathematical interface.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "direction",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r04-03",
+              "narration": "In the whole construction, the comparison lives in the profunctor coefficient category. The simple operation sending a to its transport is recovered on represented inputs. It explains the comparison without identifying every element of the larger composite with such a simple input, or asserting a complete higher coend model.",
+              "holdSeconds": 3,
+              "actions": [
+                {
+                  "target": "whole",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "coefficient",
+          "title": "The coefficient category",
+          "subtitle": "",
+          "blocks": [
+            {
+              "id": "index",
+              "type": "math",
+              "latex": "P(I)=T([I,T(U)]),\\qquad\\operatorname{Hom}_{\\mathcal Q}(A,B)=\\operatorname{Cart}(A,P(B))",
+              "description": "P retains the index mapping profile; the coefficient category has these Cartesian hom categories.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "whole",
+              "type": "math",
+              "latex": "I_x=\\operatorname{Hom}_K(x,-),\\qquad S_E(x)=\\operatorname{Transf}_{K,\\mathcal Q}(\\iota E,\\iota I_x)",
+              "description": "The whole y-dependence is a Q-valued transformation between represented diagrams.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "roles",
+              "type": "text",
+              "text": "U supplies admitted fibres. P retains a varying presheaf classifier. The coefficient category supplies represented maps, mates and their selected composition."
+            },
+            {
+              "id": "distinction",
+              "type": "text",
+              "text": "Unfolding a fixed Hom in the coefficient category preserves that composition. It does not replace the whole y-transformation by an ordinary diagonal family."
+            }
+          ],
+          "steps": [
+            {
+              "id": "r05-01",
+              "narration": "Three pieces of notation organize the whole construction. U is the admitted coefficient for families. P of an index category retains the presheaf-like values together with their higher mapping profile. The coefficient category, written with a calligraphic Q, has the Cartesian hom categories shown in the first formula.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "index",
+                  "effect": "reveal",
+                  "at": "start"
+                },
+                {
+                  "target": "roles",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r05-02",
+              "narration": "Now fix x and consider its representable family. Send both that family and E through the represented inclusion into the coefficient category. The transformations between those two diagrams form S sub E of x. This is where the entire dependence on y is retained as one categorical object.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "whole",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r05-03",
+              "narration": "The type of one component can be unfolded into an ordinary functor category. But this does not change the composition used by the whole transformation. In particular, it does not manufacture a covariant ordinary family from diagonal point values. The coefficient category keeps the two moving endpoints connected through its own operations.",
+              "holdSeconds": 3,
+              "actions": [
+                {
+                  "target": "distinction",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ladder",
+          "title": "One Homd, six observations",
+          "subtitle": "",
+          "blocks": [
+            {
+              "id": "ladder",
+              "type": "derivation",
+              "description": "Successive observations of one whole dependent-Hom construction.",
+              "density": "compact",
+              "lines": [
+                {
+                  "id": "root",
+                  "latex": "E\\longrightarrow H_E,\\quad H_E[x]=T(S_E(x))",
+                  "description": "Whole strict root"
+                },
+                {
+                  "id": "x",
+                  "latex": "E[x]\\longrightarrow T(S_E(x))",
+                  "description": "Fix the base object x"
+                },
+                {
+                  "id": "u",
+                  "latex": "\\operatorname{homd}_E(x,u)\\in\\operatorname{Obj}(S_E(x))",
+                  "description": "Retain the whole y-transformation"
+                },
+                {
+                  "id": "y",
+                  "latex": "E[y]\\longrightarrow P(\\operatorname{Hom}_K(x,y))",
+                  "description": "Observe the component at y"
+                },
+                {
+                  "id": "v",
+                  "latex": "T(\\operatorname{Hom}_K(x,y))\\longrightarrow U",
+                  "description": "Observe the presheaf at v"
+                },
+                {
+                  "id": "f",
+                  "latex": "\\operatorname{Hom}_{E[y]}(E[f](u),v)",
+                  "description": "Evaluate at the base arrow f"
+                }
+              ]
+            }
+          ],
+          "steps": [
+            {
+              "id": "r06-01",
+              "narration": "The ladder starts with a whole strict root. At a chosen base object x, its component is a functor from the fibre into the opposite of the whole transformation category. Fixing u gives an object of that transformation category. We have already retained all of the y dependence before selecting a particular y.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "ladder",
+                  "effect": "reveal",
+                  "at": "start"
+                },
+                {
+                  "target": "ladder/root",
+                  "effect": "highlight",
+                  "at": "start"
+                },
+                {
+                  "target": "ladder/x",
+                  "effect": "highlight",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r06-02",
+              "narration": "Next observe its component at y. What remains is a functor from the target fibre into the index category P. Choosing v gives an object of P, which has a fixed-object presheaf view on the reversed hom category of base arrows. These are successive observations of the same original construction.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "ladder/root",
+                  "effect": "unhighlight",
+                  "at": "start"
+                },
+                {
+                  "target": "ladder/x",
+                  "effect": "unhighlight",
+                  "at": "start"
+                },
+                {
+                  "target": "ladder/u",
+                  "effect": "highlight",
+                  "at": "start"
+                },
+                {
+                  "target": "ladder/y",
+                  "effect": "highlight",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r06-03",
+              "narration": "Finally apply that presheaf at f. We recover the target-fibre hom displayed earlier. The ladder has therefore carried much more than the endpoint formula: it retains the transformations, functors, and presheaf action that survive at each intermediate stage, where further constructions may need them.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "ladder/u",
+                  "effect": "unhighlight",
+                  "at": "start"
+                },
+                {
+                  "target": "ladder/y",
+                  "effect": "unhighlight",
+                  "at": "start"
+                },
+                {
+                  "target": "ladder/v",
+                  "effect": "highlight",
+                  "at": "start"
+                },
+                {
+                  "target": "ladder/f",
+                  "effect": "highlight",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r06-04",
+              "narration": "The source-contravariant view at x can also be written as a functor from the opposite of E of x into S sub E of x. Opposites preserve object carriers but change higher directions. Neither that observation nor the last leaf identifies all the intermediate categories with a list of pointwise values.",
+              "holdSeconds": 3,
+              "actions": [
+                {
+                  "target": "ladder/v",
+                  "effect": "unhighlight",
+                  "at": "start"
+                },
+                {
+                  "target": "ladder/f",
+                  "effect": "unhighlight",
+                  "at": "start"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "variance",
+          "title": "Source and target variance",
+          "subtitle": "",
+          "blocks": [
+            {
+              "id": "x",
+              "type": "text",
+              "text": "Source variation uses represented mates. Its shifted index is covariant on arrows and reverses the next transformation level, accounting for C₂(K)."
+            },
+            {
+              "id": "y",
+              "type": "text",
+              "text": "Target variation uses represented maps and a lax comparison. The outer fibrewise opposite compensates the source shift; the root is strict across x."
+            },
+            {
+              "id": "lax",
+              "type": "math",
+              "latex": "\\{f_1,f_2\\}\\longrightarrow\\{*\\},\\qquad qf_1=k=qf_2",
+              "description": "An ordinary factorization model illustrates a noninvertible comparison.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "scope",
+              "type": "text",
+              "text": "The ordinary negative-section picture clarifies polarity. Its direct higher extension is not the current construction; the selected solution retains the whole coefficient-valued transformation."
+            }
+          ],
+          "steps": [
+            {
+              "id": "r07-01",
+              "narration": "The two base variables do not use identical actions. In the target slot, we use represented maps. In the source slot, represented mates make the shifted action covariant on arrows while reversing the next transformation level. The dimension-two reversal records that difference; the outer fibrewise opposite brings the root family back over K.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "x",
+                  "effect": "reveal",
+                  "at": "start"
+                },
+                {
+                  "target": "y",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r07-02",
+              "narration": "The target comparison need not be invertible. In an ordinary factorization model, two different arrows can have the same composite after q. The comparison can then forget which factorization was chosen, mapping a two-element set to a singleton. This is a concrete explanation for retaining lax comparison data.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "lax",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r07-03",
+              "narration": "An ordinary negative-section formulation helps explain the required polarity. Its direct higher extension has a separate family-formation obstruction. The current dependent hom uses the whole coefficient-valued transformation instead. The communication draft explains these choices, while its compact notation and future proposed packages retain their stated qualification.",
+              "holdSeconds": 3,
+              "actions": [
+                {
+                  "target": "scope",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "homology",
+      "title": "Whole homology",
+      "scenes": [
+        {
+          "id": "zero-input",
+          "title": "Native inputs for homology",
+          "subtitle": "",
+          "blocks": [
+            {
+              "id": "complex",
+              "type": "math",
+              "latex": "C_{n+1}\\xrightarrow{d_{n+1}}C_n\\xrightarrow{d_n}C_{n-1},\\qquad d_n d_{n+1}=0",
+              "description": "A one-degree chain-zero input retains adjacent differentials and their zero composition.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "whole",
+              "type": "text",
+              "text": "The native input keeps the incoming object, outgoing arrow diagram and one whole diagram map. Its morphisms retain compatible maps of these data."
+            },
+            {
+              "id": "bridge",
+              "type": "text",
+              "text": "The internal Hom and dependent-Hom structure supports this input category. Whole universal operations can then act on both its objects and its maps."
+            },
+            {
+              "id": "hypotheses",
+              "type": "text",
+              "text": "For homological results, work in the stated ordinary additive setting with chosen whole kernel/cokernel structures. Row exactness and normality enter at the later connecting/exactness stages."
+            }
+          ],
+          "steps": [
+            {
+              "id": "r08-01",
+              "narration": "We now turn to homology. At one degree, a complex provides an incoming differential, an outgoing differential, and their zero composite. The native input retains this information as a diagram and a whole diagram map. A map of inputs must retain the compatible maps of the same objects and arrows.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "complex",
+                  "effect": "reveal",
+                  "at": "start"
+                },
+                {
+                  "target": "whole",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r08-02",
+              "narration": "This is the bridge from the dependent hom language. The native category of inputs already has its Hom structure and categorical action. We can apply whole universal operations to it, so the resulting homology comes with an action on maps. The leaf dependent hom formula alone is not a homology algorithm.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "bridge",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r08-03",
+              "narration": "The homological development works under the book’s ordinary additive and structural hypotheses. Kernel and cokernel operations will be supplied as whole adjunctions. Later, short-exact rows and normality support the connecting map and exactness proofs. Keeping these assumptions visible tells us which mathematical result is actually being constructed.",
+              "holdSeconds": 3,
+              "actions": [
+                {
+                  "target": "hypotheses",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "adjoints",
+          "title": "Kernel and cokernel adjunctions",
+          "subtitle": "",
+          "blocks": [
+            {
+              "id": "embeddings",
+              "type": "math",
+              "latex": "J(A)=(A\\to0),\\qquad I(A)=(0\\to A)",
+              "description": "The zero object defines two embeddings into the diagram category.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "adjunctions",
+              "type": "math",
+              "latex": "J\\dashv\\operatorname{Ker},\\qquad\\operatorname{Cok}\\dashv I",
+              "description": "Kernels and cokernels are retained as whole adjoint functors.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "factors",
+              "type": "math",
+              "latex": "\\kappa(d)\\circ u^\\sharp=u_0,\\qquad v^\\flat\\circ\\pi(d)=v_1",
+              "description": "Adjoint mates provide universal factors and their reconstruction equations.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "data",
+              "type": "text",
+              "text": "The chosen functor and its adjunction come first. Units, counits and mates provide the inclusion, quotient and factors, including their action in families. The native diagram profile is oplax."
+            }
+          ],
+          "steps": [
+            {
+              "id": "r09-01",
+              "narration": "Let the target be the qualified ordinary additive category. Its zero object defines two embeddings into the walking-arrow diagram category: one sends A to the arrow from A to zero, and the other to the arrow from zero to A. The native diagram interface uses its specified oplax profile.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "embeddings",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r09-02",
+              "narration": "A whole kernel functor is right adjoint to the first embedding. A whole cokernel functor is left adjoint to the second. The counit gives kernel inclusions, and the unit gives cokernel projections. These are observations of the supplied adjunction structures, rather than independently selected objects with unrelated factor records.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "adjunctions",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r09-03",
+              "narration": "Adjoint transposition supplies the universal factors. The displayed equations are their familiar endpoint reconstructions. The same operations apply to whole families through the qualified adjunction lift. Consequently the caller can supply a whole transformation and obtain its mate, with the relevant naturality retained by the construction.",
+              "holdSeconds": 3,
+              "actions": [
+                {
+                  "target": "factors",
+                  "effect": "reveal",
+                  "at": "start"
+                },
+                {
+                  "target": "data",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "whole-homology",
+          "title": "The whole homology functor",
+          "subtitle": "",
+          "blocks": [
+            {
+              "id": "cycles",
+              "type": "math",
+              "latex": "Z_n=\\operatorname{Ker}(d_n),\\qquad\\beta_n:C_{n+1}\\longrightarrow Z_n",
+              "description": "The incoming differential factors through the chosen outgoing kernel.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "homology",
+              "type": "math",
+              "latex": "H_n(C_\\bullet)=\\operatorname{Cok}(\\beta_n),\\qquad H=\\operatorname{Cok}\\circ\\operatorname{Arr}(\\beta)",
+              "description": "The whole boundary transformation feeds the same cokernel operation.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "maps",
+              "type": "text",
+              "text": "A native map of chain-zero inputs is sent to an induced homology map by the action of this same H. Cycle and quotient reconstruction laws come from the same whole transformations."
+            },
+            {
+              "id": "selection",
+              "type": "text",
+              "text": "Retain the original chosen cycles, boundary diagram and quotient. Comparing alternative presentations uses actual maps and inverse data."
+            }
+          ],
+          "steps": [
+            {
+              "id": "r10-01",
+              "narration": "Apply the kernel operation to the outgoing differential to obtain cycles. The zero-composition input has an adjoint mate into those cycles, giving the boundary map beta. We then apply the original cokernel operation to the arrow family of beta. This is the whole homology construction.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "cycles",
+                  "effect": "reveal",
+                  "at": "start"
+                },
+                {
+                  "target": "homology",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r10-02",
+              "narration": "The familiar object formula is one observation of a functor on native inputs. When a chain map is introduced as a map of those inputs, the action of H produces the induced map on homology. Its cycle and quotient equations are inherited from the whole transformations used in the definition.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "maps",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r10-03",
+              "narration": "The selected objects matter. We do not replace a cycle object or quotient by a convenient isomorphic presentation without retaining the comparison maps. When two presentations are compared, applying the original cokernel functor to actual boundary-diagram maps exposes the action and preserves the corresponding inverse data.",
+              "holdSeconds": 3,
+              "actions": [
+                {
+                  "target": "selection",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "parameter-families",
+          "title": "Families and induced maps",
+          "subtitle": "",
+          "blocks": [
+            {
+              "id": "family-data",
+              "type": "math",
+              "latex": "A:B\\to\\mathcal A,\\quad D:B\\to\\mathcal D(\\mathcal A),\\quad h:J\\circ A\\Rightarrow D",
+              "description": "A coherent family is specified by whole functors and a whole diagram transformation.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "classification",
+              "type": "math",
+              "latex": "\\Gamma:B\\longrightarrow\\mathcal Z(\\mathcal A),\\qquad\\Gamma(b)=(A(b),D(b),h_b)",
+              "description": "Gamma classifies the coherent family into the native input category.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "comparison",
+              "type": "math",
+              "latex": "H_{\\mathrm{family}}\\cong H_{\\mathrm{native}}\\circ\\Gamma",
+              "description": "The family and global constructions are related by a whole comparison with inverse data.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "meaning",
+              "type": "text",
+              "text": "Parameter action is present before evaluation at a point. A list of pointwise formulas would not by itself establish this whole comparison."
+            }
+          ],
+          "steps": [
+            {
+              "id": "r11-01",
+              "narration": "Suppose a parameter category B indexes the construction. We supply whole functors for the incoming object and outgoing diagram, together with one whole transformation expressing their compatibility. Gamma classifies that coherent family into the native input category, retaining the action already present in those data.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "family-data",
+                  "effect": "reveal",
+                  "at": "start"
+                },
+                {
+                  "target": "classification",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r11-02",
+              "narration": "There are then two ways to describe homology: perform the construction on the family, or apply the global native homology functor after Gamma. Actual boundary-diagram comparisons and the original cokernel operation give the whole comparison shown here, including its inverse data.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "comparison",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r11-03",
+              "narration": "Evaluating at a parameter recovers an ordinary point observation. The whole result is stronger because it also retains variation across the parameter category. This is the recurring purpose of the architecture: preserve the maps that the next construction needs, under the actual ordinary-target and structural profiles of the current implementation.",
+              "holdSeconds": 3,
+              "actions": [
+                {
+                  "target": "meaning",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "connecting",
+      "title": "Connecting maps and exactness",
+      "scenes": [
+        {
+          "id": "connecting",
+          "title": "The connecting transformation",
+          "subtitle": "",
+          "blocks": [
+            {
+              "id": "rows",
+              "type": "math",
+              "latex": "0\\to A_n\\xrightarrow{i_n}B_n\\xrightarrow{p_n}D_n\\to0",
+              "description": "Degreewise short-exact rows are compatible with the differentials.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "cover",
+              "type": "math",
+              "latex": "L_n=\\operatorname{Ker}(d_n^D\\circ p_n),\\quad r:L_n\\twoheadrightarrow Z_n^D,\\quad\\theta:L_n\\to H_{n-1}(A)",
+              "description": "The cycle lift cover and the map to target homology retain the original universal data.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "descent",
+              "type": "math",
+              "latex": "\\theta=\\gamma\\circ r,\\qquad\\gamma=\\delta_n\\circ q_n^D",
+              "description": "Two universal descents first reach source cycles and then source homology.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "result",
+              "type": "math",
+              "latex": "\\delta_n:H_n(D)\\to H_{n-1}(A),\\qquad\\delta_n\\circ(q_n^D\\circ r)=\\theta",
+              "description": "The reconstruction equation characterizes the whole connecting transformation.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "hypotheses",
+              "type": "text",
+              "text": "Assume whole adjunctions, exact rows and normality. No linear splitting."
+            }
+          ],
+          "steps": [
+            {
+              "id": "r12-01",
+              "narration": "Consider a degreewise short exact sequence of complexes. We want to send a homology class in D to one degree lower in A. The source cycle object is the kernel of the differential in D. Taking the kernel of its composite with the row projection gives the object L on the slide.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "rows",
+                  "effect": "reveal",
+                  "at": "start"
+                },
+                {
+                  "target": "hypotheses",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r12-02",
+              "narration": "The resulting map from L to the source cycles is an epimorphic cover under the stated hypotheses. Apply the middle differential to the inclusion of L into B. Row commutation makes that result vanish under the lower projection, so exactness and the original kernel operation lift it into the cycles of A.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "cover",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r12-03",
+              "narration": "Passing to target homology gives theta. It kills the kernel of the cover, so it descends first to source cycles. That map then kills the source boundaries, so it descends through the original homology quotient. These are the two universal descents that produce the connecting transformation delta.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "descent",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r12-04",
+              "narration": "The reconstruction equation records the result, and the same cover proves uniqueness. No linear splitting of the row projection has been selected. Lifts, covers and descents were whole operations throughout, so their action supplies the naturality of delta before we observe an individual component.",
+              "holdSeconds": 3,
+              "actions": [
+                {
+                  "target": "result",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "window",
+          "title": "Exactness of a homology window",
+          "subtitle": "",
+          "blocks": [
+            {
+              "id": "window",
+              "type": "math",
+              "latex": "H_n(A)\\to H_n(B)\\to H_n(D)\\xrightarrow{\\delta_n}H_{n-1}(A)\\to H_{n-1}(B)",
+              "description": "The connecting map completes the five-term homology window.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "canonical",
+              "type": "math",
+              "latex": "\\chi:\\operatorname{Im}(f)\\longrightarrow\\operatorname{Ker}(g)",
+              "description": "Exactness uses the fixed canonical comparison for each actual adjacent pair.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "positions",
+              "type": "text",
+              "text": "Three interior positions: the middle homology, the source of δ, and the target of δ. Each uses the original adjacent arrows and their zero-composition data."
+            },
+            {
+              "id": "proof",
+              "type": "text",
+              "text": "Whole lifting, additive differences, quotient descent and cover cancellation establish the comparison properties; normality supplies the retained inverse data."
+            }
+          ],
+          "steps": [
+            {
+              "id": "r13-01",
+              "narration": "The connecting transformation completes a five-term homology window. There are three interior exactness assertions: at the middle homology, at the source of delta, and at its target. Each assertion concerns the actual incoming and outgoing arrows at that position.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "window",
+                  "effect": "reveal",
+                  "at": "start"
+                },
+                {
+                  "target": "positions",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r13-02",
+              "narration": "Exactness is expressed through the canonical comparison from the image of the incoming map to the kernel of the outgoing map. The relevant witness makes this fixed comparison invertible and retains its inverse data. It is stronger bookkeeping than observing that two endpoint objects happen to be isomorphic.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "canonical",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r13-03",
+              "narration": "The proofs use whole lifts, additive differences, quotient descent, and cancellation through the original covers. Normality supplies the needed comparison inverses. Adjacent finite windows share their selected boundary arrows, so later assembly retains one coherent diagram instead of repeatedly choosing new representatives of its endpoints.",
+              "holdSeconds": 3,
+              "actions": [
+                {
+                  "target": "proof",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "example",
+      "title": "A nonsplit calculation",
+      "scenes": [
+        {
+          "id": "example",
+          "title": "A nonsplit polynomial example",
+          "subtitle": "",
+          "blocks": [
+            {
+              "id": "rings",
+              "type": "math",
+              "latex": "R=\\mathbb Q[x],\\qquad S=R/(x)",
+              "description": "Work with the polynomial ring over the rationals and its quotient module.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "complexes",
+              "type": "math",
+              "latex": "A_\\bullet=B_\\bullet=(R\\xrightarrow{x}R),\\qquad D_\\bullet=(S\\xrightarrow{0}S)",
+              "description": "The three complexes are supported in degrees one and zero.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "sequence",
+              "type": "math",
+              "latex": "0\\longrightarrow R\\xrightarrow{x}R\\longrightarrow S\\longrightarrow0",
+              "description": "Multiplication by x and quotient projection give each short-exact row.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "nonsplit",
+              "type": "text",
+              "text": "The inclusion multiplies by x in both degrees; the projection is the quotient map. If s:S→R is R-linear, then x·s(1̄)=0, hence s=0. It cannot split the quotient."
+            }
+          ],
+          "steps": [
+            {
+              "id": "r14-01",
+              "narration": "Take R to be the rational polynomial ring in x, and S its quotient by x. The two complexes A and B each have multiplication by x as their differential. The quotient complex D has S in both supported degrees and the zero quotient differential.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "rings",
+                  "effect": "reveal",
+                  "at": "start"
+                },
+                {
+                  "target": "complexes",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r14-02",
+              "narration": "Multiplication by x in both degrees gives the map from A to B, and quotient projection gives the map from B to D. Each supported row is the short exact sequence on the slide. The differentials and row maps commute, so these rows form a short exact sequence of complexes.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "sequence",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r14-03",
+              "narration": "These rows do not split R linearly. Any R-linear map from S back to R must send the class of one to an element annihilated by x. Multiplication by x is injective on R, so that element is zero. Such a map cannot be a section of the quotient projection.",
+              "holdSeconds": 3,
+              "actions": [
+                {
+                  "target": "nonsplit",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "compute-delta",
+          "title": "Computing the connecting map",
+          "subtitle": "",
+          "blocks": [
+            {
+              "id": "homologies",
+              "type": "math",
+              "latex": "\\begin{gathered}H_1(A)\\cong H_1(B)\\cong0,\\quad H_0(A)\\cong H_0(B)\\cong S,\\\\H_1(D)\\cong H_0(D)\\cong S.\\end{gathered}",
+              "description": "The homology modules in the supported degrees have these identifications.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "lift",
+              "type": "math",
+              "latex": "\\bar r\\in H_1(D)\\quad\\leadsto\\quad r\\in B_1\\quad\\leadsto\\quad d_1^B(r)=xr=i_0(r)",
+              "description": "Lift a representative and apply the middle differential.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "delta",
+              "type": "math",
+              "latex": "\\delta_1(\\bar r)=\\bar r,\\qquad\\delta_1=\\mathrm{id}_S",
+              "description": "Under the stated identifications the connecting map is the positive identity.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "independence",
+              "type": "text",
+              "text": "Changing r to r+xu changes the target representative by the boundary xu. The calculation explains universal descent; it does not choose an R-linear splitting."
+            }
+          ],
+          "steps": [
+            {
+              "id": "r15-01",
+              "narration": "The homology groups are easy to identify in this example. Multiplication by x has zero kernel on R and cokernel S. The zero differential on S gives S in both homological positions. We can therefore compute the interesting connecting map as a map from S to S.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "homologies",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r15-02",
+              "narration": "Represent a class in the first homology of D by the class of r, and lift it to r in the middle complex. Applying the differential gives x times r. This lies in the image of the lower inclusion, and its corresponding element in A is r itself.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "lift",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r15-03",
+              "narration": "Passing to the quotient gives the original class of r in the zeroth homology of A. Thus delta one is the identity on S, with the positive sign of the stated conventions. The connecting morphism is nonzero even though the degreewise rows have no R-linear splitting.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "delta",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r15-04",
+              "narration": "Changing the representative from r to r plus x times u changes the answer by a boundary. This explains independence of the choice in the representative calculation. The whole construction packages that independence through universal lifting and descent, preserving the selected quotient and its action on further maps.",
+              "holdSeconds": 3,
+              "actions": [
+                {
+                  "target": "independence",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "presentations",
+          "title": "The sequence and its presentations",
+          "subtitle": "",
+          "blocks": [
+            {
+              "id": "les",
+              "type": "math",
+              "latex": "0\\to S\\xrightarrow{\\delta_1=\\mathrm{id}}S\\xrightarrow{0}S\\xrightarrow{\\mathrm{id}}S\\to0",
+              "description": "This is the simplified nontrivial mathematical display after identifying the nonzero homologies with S.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "matrices",
+              "type": "math",
+              "latex": "\\small\\begin{array}{c|c|c}\\text{Map}&\\text{Raw matrix}&\\text{Quotient map}\\\\\\hline\\delta_1 &[1]&\\mathrm{id}\\\\H_0(i)&[x]&0\\\\H_0(p)&[1]&\\mathrm{id}\\end{array}",
+              "description": "The retained raw matrices represent the stated maps on the quotient modules.",
+              "narrationPolicy": "explain"
+            },
+            {
+              "id": "relations",
+              "type": "text",
+              "text": "Since x=0 in S, [x] induces zero. The selected H₀(D) keeps relation matrix [x x]."
+            },
+            {
+              "id": "certificate",
+              "type": "text",
+              "text": "The retained certificate has eight objects, seven arrows and six interior positions."
+            }
+          ],
+          "steps": [
+            {
+              "id": "r16-01",
+              "narration": "After the stated identifications, the nontrivial part of the long exact sequence has the form displayed here. The connecting map is an identity, the next map is zero, and the following projection is again an identity. The retained computational presentation contains more information than this simplified display.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "les",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r16-02",
+              "narration": "In particular, the program represents the zero homology map induced by the inclusion using the polynomial matrix x. That is compatible with a zero quotient map because x is a relation in the target. A coefficient witness records the corresponding equation; inspecting matrix entries alone would miss its meaning.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "matrices",
+                  "effect": "reveal",
+                  "at": "start"
+                },
+                {
+                  "target": "relations",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r16-03",
+              "narration": "The selected final homology presentation also retains both relation columns, x and x. The concrete formal certificate refers to the actual selected diagram, with eight objects, seven arrows, and six interior positions. It does not certify a fresh list of independently replaced endpoints merely because they have familiar isomorphism classes.",
+              "holdSeconds": 3,
+              "actions": [
+                {
+                  "target": "certificate",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scope",
+      "title": "Evidence and scope",
+      "scenes": [
+        {
+          "id": "evidence",
+          "title": "Computation, interpretation and proof",
+          "subtitle": "",
+          "blocks": [
+            {
+              "id": "computed",
+              "type": "text",
+              "text": "Computed: selected presentations, matrices, coefficient witnesses and equations. These data remain available for later calculations."
+            },
+            {
+              "id": "supplied",
+              "type": "text",
+              "text": "Supplied: the whole model, its normality, row semantics and agreements with the selected complete arrows."
+            },
+            {
+              "id": "proved",
+              "type": "text",
+              "text": "Derived: canonical image-to-kernel comparison inverses and exactness certificates for the actual displayed diagram. No new output-exactness assumption is added."
+            },
+            {
+              "id": "boundary",
+              "type": "text",
+              "text": "A raw calculation, an interpretation contract and a conditional formal derivation have different roles. The current interface preserves those distinctions."
+            }
+          ],
+          "steps": [
+            {
+              "id": "r17-01",
+              "narration": "It is useful to separate three kinds of evidence. Effective algebra returns selected presentations, matrices, and coefficient witnesses. These are useful computational results even before a proof interface is invoked. Retaining them allows a later construction to use the same objects and maps.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "computed",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r17-02",
+              "narration": "The interpretation layer supplies the whole model and its normality, together with agreements between the categorical operations and the chosen concrete data. Those semantic contracts are not established by checking a list of matrix entries. Complete arrow interpretations retain the source, target, and map together.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "supplied",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r17-03",
+              "narration": "The native proofs then derive exactness at the fixed canonical comparisons and assemble the displayed certificate. The constructor adds no new assumption of output exactness. This is a substantive conditional result, while a closed construction of every concrete model and a general correctness theorem for the algebra engine remain separate work.",
+              "holdSeconds": 3,
+              "actions": [
+                {
+                  "target": "proved",
+                  "effect": "reveal",
+                  "at": "start"
+                },
+                {
+                  "target": "boundary",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "closing",
+          "title": "Scope and further reading",
+          "subtitle": "",
+          "blocks": [
+            {
+              "id": "takeaway",
+              "type": "text",
+              "text": "The Homd ladder retains coherent parameter action. Whole universal operations retain that action through homology and the connecting transformation."
+            },
+            {
+              "id": "result",
+              "type": "text",
+              "text": "The nonsplit example makes the computational distinction visible: a nonzero connecting map, relation-aware quotient maps, and selected data reused by a conditional exactness certificate."
+            },
+            {
+              "id": "limits",
+              "type": "text",
+              "text": "Current scope: the stated ordinary/additive structures and supplied model interpretations. General higher models, unbounded complexes and global metatheory are not established by these examples."
+            },
+            {
+              "id": "reading",
+              "type": "text",
+              "text": "Read: current book §2.7.1 and Chapter 31; Appendix G; the November 6 Homd communication draft. RHPL supplies the computational perspective."
+            }
+          ],
+          "steps": [
+            {
+              "id": "r18-01",
+              "narration": "The thread through the talk is the retention of action. The dependent hom ladder observes one coherent construction at successively fixed parameters. Whole universal operations then use the native input structure to build homology, induced maps, and a connecting transformation with its reconstruction and exactness properties.",
+              "holdSeconds": 0.8,
+              "actions": [
+                {
+                  "target": "takeaway",
+                  "effect": "reveal",
+                  "at": "start"
+                },
+                {
+                  "target": "result",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            },
+            {
+              "id": "r18-02",
+              "narration": "The nonsplit example shows why those interfaces matter in a calculation. It also shows why presentations, relations, and interpretations must remain visible. For a closer account, read the current book alongside the consolidated dependent hom communication. The mathematical programme continues beyond these qualified interfaces, with its broader models and metatheory still explicit research questions.",
+              "holdSeconds": 3,
+              "actions": [
+                {
+                  "target": "limits",
+                  "effect": "reveal",
+                  "at": "start"
+                },
+                {
+                  "target": "reading",
+                  "effect": "reveal",
+                  "at": "start"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

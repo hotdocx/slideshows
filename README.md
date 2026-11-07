@@ -28,3 +28,7 @@ source credits. Do not add private source archives, expiring access URLs, tokens
 or development caches. Deployments upload only `site/` through GitHub Actions.
 
 Each presentation retains its own authorship and third-party license notices.
+
+The Emdash talk's editable text, LaTeX and narration source is retained under
+[`authoring/emdash-rhpl-2026/`](authoring/emdash-rhpl-2026/). It is not part of
+the deployed audience payload.
