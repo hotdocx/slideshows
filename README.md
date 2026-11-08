@@ -18,8 +18,8 @@ The RHPL package now includes authored HyperFrames caption graphics, enabled by
 default: outlined white phrases with the measured active word in yellow. These
 are part of the same editable composition and can support richer typography and
 animation. WebVTT is retained as a text companion. No new narration was generated.
-The November 8 package is 15,033,702 bytes unpacked / 8,963,567 bytes zipped;
-the optional 32 kbps narration version is 6,533,426 bytes zipped.
+The November 8 package is 15,033,702 bytes unpacked / 8,963,565 bytes zipped;
+the optional 32 kbps narration version is 6,533,427 bytes zipped.
 
 `site/` is the deployment payload. No Node.js runtime, `node_modules`, MP4,
 source manuscript archive or production credential is deployed. The optional
