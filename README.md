@@ -14,6 +14,13 @@ GitHub Pages serves its standalone shell. GetPaidX registers the same manifest
 and files, adds access control, and supplies its post player and Live Session
 controls. The presentation timeline and narration remain the same.
 
+The RHPL package now includes authored HyperFrames caption graphics, enabled by
+default: outlined white phrases with the measured active word in yellow. These
+are part of the same editable composition and can support richer typography and
+animation. WebVTT is retained as a text companion. No new narration was generated.
+The November 8 package is 15,033,702 bytes unpacked / 8,963,567 bytes zipped;
+the optional 32 kbps narration version is 6,533,426 bytes zipped.
+
 `site/` is the deployment payload. No Node.js runtime, `node_modules`, MP4,
 source manuscript archive or production credential is deployed. The optional
 local/workspace server uses only Node's standard library:

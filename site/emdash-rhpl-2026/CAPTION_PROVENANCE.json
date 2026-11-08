@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "rendering": "authored-hyperframes-layer",
+  "style": "outlined-word-highlight",
+  "wordTiming": "retained-reviewed-observations",
+  "sourceMasterSha256": "2743175e36eabeb6bb52ec104274c55eddb77055a7af80a462a8858bb7a3d6bf",
+  "nativeAudioSha256": "3ab36eb25c146a8c0dd61123d701bbd7c9c1ff8f67affa62af99df75cbc41384",
+  "alignmentSha256": "6c2a2b5c90291ce76e79f1fad084fbc88b851a95ac481ac816e331299196f6d4",
+  "captionReviewSha256": "eb4701602bdc71a7d825452c7ed32428ff80cb86faec7dbe28e48d41dbfefe57",
+  "scriptSha256": "18570e064d3bbf5c05c217832de4e4ebc0caef9b7ecc9334c61d5758c5f191e4",
+  "durationSeconds": 1153.4,
+  "measuredDisplayGroups": 2668,
+  "cues": 2670,
+  "providerRequests": 0
+}

@@ -1701,6 +1701,7 @@
     }
   ],
   "hashes": {
+    "assets/caption-timeline.js": "4381e563cf2fc9ad503c2f4ef72f278fc9ea7647ae571a8bdb02649a03147c5e",
     "assets/fonts/mono.ttf": "c805f9436dbc268644c1d9584f01a601a653e028e08fd74b9b949f6cf8304d88",
     "assets/fonts/sans.ttf": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280",
     "assets/fonts/serif-bold.ttf": "847b33e13925f19ff87e4d934d6b3cf7cac35ce16424f6f670e40c2f377cf2df",
@@ -1769,14 +1770,16 @@
     "assets/katex/fonts/KaTeX_Typewriter-Regular.woff2": "71d517d67827787cfabdf186914cc3358eda539e37931941f2b2fd4a21f68c0b",
     "assets/katex/katex.min.css": "0289a02cf451a44dd73add683a09644252363871ac11713a647b732cee8b1ee3",
     "AUDIO_ENCODING.json": "5c017e714f2e927f33c6ecea42df4bc5283bad4316622d11485c5a5e3db8b53d",
-    "captions.vtt": "6987cf359a58f09ef3edc683175465d70263ea88a8c1d070e86aff6705dcbb79",
-    "index.html": "749f925f779720fc60225682429289a458a0a9aefcb30adeaddeb304093e2b1d",
+    "CAPTION_PROVENANCE.json": "aae6e04c4e96c879b960adb81ee0b2d5c62cb1be8ac610d528106058f74f520e",
+    "captions.vtt": "7ae384ed1e8840474e1a6671004edf01947ebfed57c0f1713b963185abd410ba",
+    "index.html": "96ddf7fad8ee1eacc0f235c475c6fcb3bdd3281f31c48fc4f293593b438f731b",
     "licenses/DejaVu-copyright.txt": "63d3ba759d12804c5b31a9d5940d855c1820d1f5999e6b0872eb1c7ff045fbc9",
     "licenses/HyperFrames-Apache-2.0.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
     "licenses/KaTeX-LICENSE.txt": "766ccc1f306c885aa45542a9846bbd0a505b27a0374f146778171c2254ce18e3",
     "presentation/assets/voice.m4a": "3ab36eb25c146a8c0dd61123d701bbd7c9c1ff8f67affa62af99df75cbc41384",
-    "presentation/index.html": "6441bfdc3581b36bd8ed10562574f27ba83fd73e30ebbc9151d7967e750a77a5",
-    "THIRD_PARTY_NOTICES.txt": "6006163ee41bba730a5ee4577dfd018bbc002758ec9895ab5b633a07dfa9d1a9"
+    "presentation/caption-overrides.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "presentation/index.html": "0e6d88f9824b66dd761ffde12e44601e8f4c044659b6f3dd769391b9348ce2a7",
+    "THIRD_PARTY_NOTICES.txt": "dc7f5ae4059b246a516d18c00a0e51738223217e889fabf01992388c6694ab4d"
   },
-  "fingerprint": "26b8ea3b7716be2f58da08accec52194e4311a28b0bd77f179a463d75c7e50f6"
+  "fingerprint": "8dee78aac7e251a2ec153f4220b851b2330c4308c0ebd73965b510105d2eb61e"
 }
